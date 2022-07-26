@@ -1,1 +1,68 @@
-ptn file
+import "hash"
+
+//
+// Open Source malicious files confirmed by scientists
+// TLP WHITE
+// Quality Assurance passed on: Yara 3.2 and 4.2
+//
+// On windows needs:
+//      libeay32.dll
+//      ssleay32.dll
+//      msvcr100.dll
+//  
+//Syntaxe: Yara -r spectre.ptn c:\directory
+//
+//Troubleshooting : 
+//     Error scanning means the scanned fil is open and/or used by an external process
+//     If needed dll files are not present on YARA directory, the hashes calculation won't be done
+//
+// Sources are noted in meta and we thank all of them for these hashes
+//
+
+
+rule IOC_HEODO
+{
+
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_HEODO_LAB"
+date_IOC = "07/07/2022  11:33:43"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "HEODO"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+condition:
+
+hash.sha1(0, filesize) == "8f9b0468e9f8b8ed41f3e14ccc2b597019e84bb27012b00702a6ae11ce4da0be" or 
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_SMOKE_LOADER
+{
+
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "SMOKE_LOADER_LAB"
+date_IOC = "07/07/2022  11:33:43"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "SMOKE_LOADER"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+condition:
+
+hash.sha1(0, filesize) == "788311bdb517e61db6b2ff129214085a13814fd389ee21ed264f74d0d18f54be"
+
+
+// IOC Quality Assurance
+// hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+
+}
