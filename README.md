@@ -3,7 +3,7 @@ Spectific rules for specific needs on files detections.
 
 The particularity of SPECTRE.PTN is that it uses the YARA engine to try to detect the SHA256 of malicious codes that are present in the file system.
 
-We have a false positive database of over 70,000 entries which minimizes the risk of irrelevant alerts.
+We have a false positive database of over 70,000 entries that is run before the SPECTRE.PTN file is generated, which minimizes the risk of irrelevant alerts.
 
 SPECTRE.PTN is updated every 12 hours 7 days a week.
 
