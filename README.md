@@ -24,5 +24,7 @@ Tested with YARA v3.2.0 & v4.2.2
 
 
 ---Thanks---
+
 Thanks for the MalwareBazaar DB that is the main contents of the spectre.ptn
+
 A big thanks for the contribution of Benois Deries that is followed the project instructions from Marc Blanchard
