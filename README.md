@@ -1,4 +1,4 @@
-# Yara rules
+# Yara rules UPDATED twice a day
 Spectific rules for specific needs on files detections.
 
 The particularity of SPECTRE.PTN is that it uses the YARA engine to try to detect the SHA256 of malicious codes that are present in the file system.
