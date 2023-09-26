@@ -11,12 +11,81 @@ hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5
 }
 
 
+rule IOC_COBALT_STRIKE_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_COBALT_STRIKE_LAB"
+date_IOC = "2023-09-25 21:38:23"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "COBALT_STRIKE"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+
+hash.sha256(0, filesize) == "1e9e313fbfbcb2c391c8bb8732790396ece81587944ffd829b3fc1d7733b39cc" or
+hash.sha256(0, filesize) == "da299be7f0cc9d71cdea150c0951dd6e4b121b65882a5bf2826f59dd02ea0ab5" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_NA_unknown
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_NA_LAB"
+date_IOC = "2023-09-25 21:32:09"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "NA"
+file_type = "unknown"
+comment = "Source : abuse.ch"
+
+
+condition:
+
+hash.sha256(0, filesize) == "1e02e674196885d692c0dbb6e80cffd83e6d54bf244761d051d6b579ac83db40" or
+hash.sha256(0, filesize) == "9bb5e7a76e66d105fa5a65728517b8d8f9465525465f92eb68a89705476b1d26" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_DCRAT_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_DCRAT_LAB"
+date_IOC = "2023-09-25 20:45:20"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "DCRAT"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+
+hash.sha256(0, filesize) == "ab4f8a0df38c09efb9b9db694511d4d6e615cc3c35bfc14b55ddaa3828e13864" or
+hash.sha256(0, filesize) == "ac0fc303f893f17ebe04ea11090b5c6787357a3a6f4d4d2e12fe14e84f10b340" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
 rule IOC_NJRAT_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_NJRAT_LAB"
-date_IOC = "2023-09-24 17:30:22"
+date_IOC = "2023-09-25 19:25:16"
 info = "Version 1.0 b"
 internal = false
 score = 99
@@ -29,99 +98,76 @@ comment = "Source : abuse.ch"
 condition:
 
 hash.sha256(0, filesize) == "a72957878c03dbcd6fa1735e785eae22254fd23e2b7c06ce638d361c0b4a4878" or
-hash.sha256(0, filesize) == "021833fb04156406bfe36efa3e021a801df64e0b1a7b8e278b549ef5c6586b86" or
+hash.sha256(0, filesize) == "b36df944b495ce1289b7a181be61d4cf78e212c60d56eafdcb24fecd99f014b0" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_RECORDBREAKER_exe
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_RECORDBREAKER_LAB"
-date_IOC = "2023-09-24 10:40:36"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "RECORDBREAKER"
-file_type = "exe"
-comment = "Source : abuse.ch"
-
-
-condition:
-
-hash.sha256(0, filesize) == "55de44d4b1b6a3f2b7b38cb908fba92c852530dbb8d273c2c86a7f490f5ffa5f" or
-hash.sha256(0, filesize) == "808b9cff96c4777439f0e8e8fe1be539ab290fcd7e1587d51d151cbe162231e6" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_NA_msi
+rule IOC_NA_xlsx
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_NA_LAB"
-date_IOC = "2023-09-24 09:18:03"
+date_IOC = "2023-09-25 18:51:55"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
 threat = "NA"
-file_type = "msi"
+file_type = "xlsx"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "ed4b05aa35f2b5b2c976bbb65d5a2079f6ab6bb166b517bec3b02470d35e4d9e" or
-hash.sha256(0, filesize) == "87df66fc4ca5703a631f8d8528965437e348d87c137af08cda544108199ccaa7" or
+hash.sha256(0, filesize) == "f21641048c363841f9d62cca0c545acdb5c700ce9b11cbafba77bbba024f6e86" or
+hash.sha256(0, filesize) == "de8e15c8fef3fbf9357004b85aef7b938a742a9cf0f8727cb4100f002a664cd6" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_MARSSTEALER_exe
+rule IOC_NA_zip
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_MARSSTEALER_LAB"
-date_IOC = "2023-09-24 08:57:21"
+ref_IOC = "IOC_NA_LAB"
+date_IOC = "2023-09-25 14:48:13"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "MARSSTEALER"
-file_type = "exe"
+threat = "NA"
+file_type = "zip"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "7ea53efe7909227d8d1c3b96df3f2194947459d09d6168e629dd1d089b3a9c42" or
-hash.sha256(0, filesize) == "f68b8167482d208f65eb3234f3a3e2602cb4801104946061b0be0f3b440e3c5c" or
+hash.sha256(0, filesize) == "5105ca1f00e3a64fc50060e5603f05551184562e806ad37609727931fcb27951" or
+hash.sha256(0, filesize) == "14bd97568b3667d3d1c52cd29a16f794af71662694bb8902890815eb0e3d36dd" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_RISEPROSTEALER_exe
+rule IOC_AGENTTESLA_bat
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_RISEPROSTEALER_LAB"
-date_IOC = "2023-09-24 06:32:16"
+ref_IOC = "IOC_AGENTTESLA_LAB"
+date_IOC = "2023-09-25 13:23:34"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "RISEPROSTEALER"
-file_type = "exe"
+threat = "AGENTTESLA"
+file_type = "bat"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "b95f692cd08b542566781aa9b70b093160d19dcab106403ff5af6bcee89437fe" or
-hash.sha256(0, filesize) == "a05890b84b67d77df161a9f8fbd636c09db2081d89ea2d36040fe5d05df2b555" or
+hash.sha256(0, filesize) == "8700aee9c4faa1a1855c028c12b94adf060edae02398a1debbd7d578b65ffeb5" or
+hash.sha256(0, filesize) == "b78cf80d94f017c5f389590f2f3b312f1694d93e5e6aebf296e46b5b9dbca2da" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
@@ -131,7 +177,7 @@ rule IOC_RHADAMANTHYS_exe
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_RHADAMANTHYS_LAB"
-date_IOC = "2023-09-24 04:49:33"
+date_IOC = "2023-09-25 12:44:50"
 info = "Version 1.0 b"
 internal = false
 score = 99
@@ -143,207 +189,178 @@ comment = "Source : abuse.ch"
 
 condition:
 
+hash.sha256(0, filesize) == "5e970a1859278469998502475f091315590b66f3a3f101caa25b7fd52b3214ab" or
 hash.sha256(0, filesize) == "4ed48b6b978ebf13a362f8ff7a2d2c1fdf17f4a4d1f513c4851201f804c04ef9" or
-hash.sha256(0, filesize) == "28b0e9f110f8997d4252a747d562c83b822fc2a6546302a18ca36b00082c7bf8" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_44CALIBERSTEALER_zip
+rule IOC_DBATLOADER_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_44CALIBERSTEALER_LAB"
-date_IOC = "2023-09-23 18:46:18"
+ref_IOC = "IOC_DBATLOADER_LAB"
+date_IOC = "2023-09-25 12:26:33"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "44CALIBERSTEALER"
-file_type = "zip"
+threat = "DBATLOADER"
+file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "a179c07c3f7cdd8ac6239f5e51a7479dd08b6fb3893e112d7e704052ec208f32" or
-hash.sha256(0, filesize) == "0b54d89fb52fc4655b616dd3ed96c226df44cdafc20166395eb16e82d0af48c4" or
+hash.sha256(0, filesize) == "a8e594699704169027208fdfc49bcdfed3c53aaea5c7d73140db21d97ab447ad" or
+hash.sha256(0, filesize) == "7d42baf12969f24e3f68e53b146b4f049c1f772396c2e68c1a18bf75e26992ad" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_NA_iso
+rule IOC_ADWARE_NEOREKLAMI_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_ADWARE_NEOREKLAMI_LAB"
+date_IOC = "2023-09-25 12:25:43"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "ADWARE_NEOREKLAMI"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+
+hash.sha256(0, filesize) == "5115c388d9ee15a982553ee9f821b2c51a70e6a84b9245ab0bd6906c00738f68" or
+hash.sha256(0, filesize) == "a96b67d92b927feb54f4b3d37de9af76d4ce3b7dd20df4bb71567b69e2001368" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_NA_dll
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_NA_LAB"
-date_IOC = "2023-09-23 18:23:41"
+date_IOC = "2023-09-25 09:18:52"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
 threat = "NA"
-file_type = "iso"
+file_type = "dll"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "af1922c665e9be6b29a5e3d0d3ac5916ae1fc74ac2fe9931e5273f3c4043f395" or
-hash.sha256(0, filesize) == "c03292fca415b51d08da32e2f7226f66382eb391e19d53e3d81e3e3ba73aa8c1" or
+hash.sha256(0, filesize) == "cb9b9ec3b46a885c47f5f3ee7eb023ab614771bb1ba1f33577bfe4f422879869" or
+hash.sha256(0, filesize) == "8dfcd9750eec6dd98797767ee14a952d3797c67f4f1a67d7cff140281fd94397" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_SNAKEKEYLOGGER_exe
+rule IOC_PURECRYPTER_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_SNAKEKEYLOGGER_LAB"
-date_IOC = "2023-09-23 07:24:08"
+ref_IOC = "IOC_PURECRYPTER_LAB"
+date_IOC = "2023-09-25 07:14:36"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "SNAKEKEYLOGGER"
+threat = "PURECRYPTER"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "f8e42f0b33b357352164af46809b4ba2fd3f213059b4f7d1a38c9df1e84e6b12" or
-hash.sha256(0, filesize) == "a5395961ee5eeddf2c81583e2eb11dafe8f8ebcc350204e0c8344e4d3e1614e6" or
+hash.sha256(0, filesize) == "b7a91f80d17f82d43fe31deca3229d614fc29ab7f7e55c043f572235048305a6" or
+hash.sha256(0, filesize) == "c5f6b6fe067421954d2bc91572ec3eab1375d6e7efd84895239c3252a93da2f1" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_DCRAT_exe
+rule IOC_FORMBOOK___exe_
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_DCRAT_LAB"
-date_IOC = "2023-09-23 07:20:16"
+ref_IOC = "IOC_FORMBOOK_LAB"
+date_IOC = "2023-09-25 06:52:52"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "DCRAT"
+threat = "FORMBOOK"
+file_type = "__exe_"
+comment = "Source : abuse.ch"
+
+
+condition:
+
+hash.sha256(0, filesize) == "df83d159ad49228a00b4beb9da11a79fada157238da4ba469a234fd11b4d1788" or
+hash.sha256(0, filesize) == "6707d757c1b71b9b9259b8c9b425b7fc1c44b6bc878177e3cb3cc694d2b30534" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_ASYNCRAT_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_ASYNCRAT_LAB"
+date_IOC = "2023-09-25 02:40:08"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "ASYNCRAT"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
 
-hash.sha256(0, filesize) == "db27a1103437042989486896fb714fd8cd59a856a7db453bbcc2162794b3fde6" or
-hash.sha256(0, filesize) == "c77f97d66580abf03cf332242848689969e9957747a9fcc21dfe7a2ac1237b0d" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-rule IOC_NA_exe
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_NA_LAB"
-date_IOC = "2023-09-23 07:35:30"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "NA"
-file_type = "exe"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "a23f4242a76cee5433ded21e591af5e1973bb00c561b089256ceff69d154eb06" or
-hash.sha256(0, filesize) == "d8b000c612b2ce9557ce07cfe8067b5d7e6bfb5039ccaedaa6df5b21cfbbf473" or
-hash.sha256(0, filesize) == "269f95a5eaad3e6a79746836ab191e4586caa963735da89df1703b4af69444d3" or
-hash.sha256(0, filesize) == "5f0c15e04c5359cd6260d91bd8c1e4f8ccb2d8d13aacaa31bdc6f1439985171f" or
-hash.sha256(0, filesize) == "4f128b2da9cf6f5aa8651941b942f2ad725b1cb380c15733e5164befc5ea5d89" or
-hash.sha256(0, filesize) == "71f277fda0260a2c642ff1beb54929700c1a1eaa54898e841ec911e9fe8fc1dd" or
-hash.sha256(0, filesize) == "05471dc58e71d0cf565722a23c6503e19aab894db28f61553bf136b37b896899" or
 hash.sha256(0, filesize) == "7e1974ea77e2416b2ac75656d1e24da59de0af97815a9e337e4a7cc58f6339a4" or
-hash.sha256(0, filesize) == "aa9d54d5001193efee0e4315f45a635321e84c719c0c4736f54a8d1b663f095c" or
-hash.sha256(0, filesize) == "e1d6fce02225d2c53c998780a6145d6ac85769a94eb8e639498bc7a49d61b043" or
-hash.sha256(0, filesize) == "d1f8afab318e9df57d53b5b960846859d7a4a88efb0c68abffe925e8789232ec" or
-hash.sha256(0, filesize) == "f3935a015ba6ebf4ac9e8633411731132d4826b1059d0f6c74a9e7d07e9a72a9" or
-hash.sha256(0, filesize) == "7ee167a158f7244b026e2174755dfc49e31da6d8005de26214adbec7e149ac62" or
-hash.sha256(0, filesize) == "aeece75735bd3d83b9f2e7eb464dc7910b9afd25db84379136978f58345dfcbc" or
-hash.sha256(0, filesize) == "56da2d8c734e81f817a3311bbba558878e6c7cdd9e14746845e56b6f767a0102" or
-hash.sha256(0, filesize) == "59d205ce5d4c93db98870606fc74040c954bd0c6b94b99732dd160785b8daebb" or
-hash.sha256(0, filesize) == "4bc2494f21f487376a34c3bfbf83721648f42c4ebee6e950bd3140de88d637eb" or
-hash.sha256(0, filesize) == "5aa2adb42fabd6aa03a954d7f237163913d5226638268ea4a3113d75c7947151" or
-hash.sha256(0, filesize) == "c389ad824c56ba54764e48f4a96a956c4a52d25b162d5380634b8b327c8c8c62" or
-hash.sha256(0, filesize) == "328c5d9f63a06ed71c9f7a5c0c18ef399526fb396640ae6bb7a502625c7bcfcf" or
-hash.sha256(0, filesize) == "3f2ff2d027e14cf8969b9e7f2c83503529c92deafc69bf42984dcc551c6f977d" or
-hash.sha256(0, filesize) == "44f53e578f99badd615955fdb2d5c5a70a69cfec2470d06e6be8d08c230b953f" or
-hash.sha256(0, filesize) == "1068c01d3e605c23f5dd66a891f4b80c2f0c0281a1ee8beb2c9e155071a02b0d" or
-hash.sha256(0, filesize) == "98dc2c312ad9e6a0b5ea2d60681d8fd4e3b64161376ef221a22283e4e43cb3a5" or
-hash.sha256(0, filesize) == "cc8b834720e7f934167566776a149ad1ac25f9205c39d684565fdc9877c662ad" or
-hash.sha256(0, filesize) == "3e2de2b63b4ac450d6be26220f54dffaf8bcc8cd34d1fb425fa00e07779ec018" or
-hash.sha256(0, filesize) == "a42dd6bea439b79db90067b84464e755488b784c3ee2e64ef169b9dcdd92b069" or
-hash.sha256(0, filesize) == "7fc9e830756e23aa4b050f4ceaeb2a83cd71cfc0145392a0bc03037af373066b" or
-hash.sha256(0, filesize) == "cf46d2936bc3e358a7702ddc43087a9498676b37287f2d1d3e1473375a7fa57b" or
-hash.sha256(0, filesize) == "6a953b74ca5708f22b5a6fad65a3a47c9f6239f772e7ce37aa34876926de6a0e" or
-hash.sha256(0, filesize) == "8eae8d282bb235667634a6c8ada53d8b48dd35f752cf61732071e94e109fc083" or
+hash.sha256(0, filesize) == "6f19aa119dfc5810c965da8be9a34141a8197fc487f1f968c06c640fd8f8dc9d" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_MYSTICSTEALER_exe
+rule IOC_AMADEY_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_MYSTICSTEALER_LAB"
-date_IOC = "2023-09-23 15:09:58"
+ref_IOC = "IOC_AMADEY_LAB"
+date_IOC = "2023-09-24 09:20:35"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "MYSTICSTEALER"
+threat = "AMADEY"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "1c1232c2055ba6f3c6cca36b3b9a0ed5e18e2cef358def73b6117d8b25ea4572" or
-hash.sha256(0, filesize) == "b22be0c777ed1cf28efb837a32be0f6e1d7871ff3e02e7c6e96a3605321feaa8" or
-hash.sha256(0, filesize) == "c90b731a014d86b0d47786c43c6dd0a395762c966e5b3416dc98ad506d0cb6e7" or
-hash.sha256(0, filesize) == "0321ff9b349c1bda3dbb56c61d35ebe56ac8ac9dfbb6206048bd9b8153538d88" or
-hash.sha256(0, filesize) == "6582f18f0822d4a4f7f68e165d82f1961a0ba63d4110065606d21ee8e97d27e1" or
-hash.sha256(0, filesize) == "590e86916d371437ce1601922f857297adc4627d5756c66c0b71e11891abaa68" or
-hash.sha256(0, filesize) == "66fcbc50ae7ad897070b0c5219518239917d899fdf67b66b146557f1cdb051b4" or
-hash.sha256(0, filesize) == "b82895964dcd2bc25bd94d15882e352369d4a2e326dabccce89571f7a9c76cd6" or
-hash.sha256(0, filesize) == "7c14e7bdc43e28f6bcb11e41f3519f9bae7c4cd8e5384c9edd406dd2032b93ad" or
-hash.sha256(0, filesize) == "e8023b68d5a9c7c7dd7a0ac7a2026c7e4af92c48466a8977e3490723222ad9fd" or
-hash.sha256(0, filesize) == "94169cc275ef0c781355d2f4266114298f592cc105e6bb79e5340c586ceb9e3c" or
-hash.sha256(0, filesize) == "c6490fdc23e3922af12fc09440c84ea282526917fcc9d7a4282f8353ab760711" or
-hash.sha256(0, filesize) == "35a6f9342a6056e55acb1f7d51ba7e3ae925787201c9ebc3ba9bb455e7327153" or
-hash.sha256(0, filesize) == "1609e8b7a3a241720c2972771f848aaffc7ca107fc6cda77703e07e7fdb83b73" or
-hash.sha256(0, filesize) == "eb24bc4aed498450dd91873db7832cd33be36a94c32d4fb049bd334ab0a4a5ca" or
-hash.sha256(0, filesize) == "69bafbc99f2eb926806f5b08c251815b9e0a26f7ebf035cabe5e4b6cdbf71caf" or
-hash.sha256(0, filesize) == "3ce7ac0e6c94b12fbed733a3f3a1788a19402bdfe766fa90a0594689391c9f34" or
-hash.sha256(0, filesize) == "bfb4eee283be58d338c3be6764107238535623494c92c2dd0e96a9dcdc3b1856" or
-hash.sha256(0, filesize) == "6489251a000df2cdccdadbcc95c3434f8484b11c3c653dfa0c9c29bb03aba49f" or
-hash.sha256(0, filesize) == "1d4d7c1afdb5e830b264b293b477c0a74768b4b9e8291d6e671d943c565f2409" or
-hash.sha256(0, filesize) == "9bb54b3723db3bbb60411da7dde06e8b23a2a5fa6dcad6b57fca680fae3b6ff9" or
-hash.sha256(0, filesize) == "1319d7501351f1023273cda386fbde4dea62cb7de9b3a2a5b38f5e7f51407191" or
-hash.sha256(0, filesize) == "fdf36f61dc6d9702a7459b466272a13e29f7d4b70e1311a039d977221999a5d7" or
-hash.sha256(0, filesize) == "41c8857bea496f71e314ba368b08e9575093f544f84a3517f7391bb7e0bf956b" or
-hash.sha256(0, filesize) == "bbb26bfc7bc961c72f3d391433c3602874ed447ca4ec4ff5e8b141c2b3f8a86f" or
-hash.sha256(0, filesize) == "f8793e8dea16dfc2bf9d74ad93e749f978988c6111059bf2fc1b1e40964629cf" or
-hash.sha256(0, filesize) == "f648e7461ffce908e516ff0aa05432a3ecbd0f7d38097f86cafbca18dd34c276" or
+
+hash.sha256(0, filesize) == "3466225309654a486ac587bf9f06afd92b184a7e6c2513d588c3bfbd170e8d1a" or
+hash.sha256(0, filesize) == "d36d3e3be73c9a4ef91dc2377ad84bbb26f158680a46c2512b212e8181984dee" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
-
 
 rule IOC_MIRAI_elf
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_MIRAI_LAB"
-date_IOC = "2023-09-23 01:00:04"
+date_IOC = "2023-09-24 07:50:04"
 info = "Version 1.0 b"
 internal = false
 score = 99
@@ -354,6 +371,21 @@ comment = "Source : abuse.ch"
 
 
 condition:
+hash.sha256(0, filesize) == "c61f8a86cfe9b3ac75d81a1d70e24f247516e47efb90a80e342783f33bc949d3" or
+hash.sha256(0, filesize) == "940d5e58989045b050b85f26e643a169640c5e78492a2f6bc7efe3489474d512" or
+hash.sha256(0, filesize) == "3da934b7362c1c39d677c66088fca2fd848bb121d0a2e3d81db237f7426d136e" or
+hash.sha256(0, filesize) == "864c2b855131966ccc9aff1f0498669fa03502a72c8f70a1fcd9bffd862eec3c" or
+hash.sha256(0, filesize) == "b523ea86ebfd666153078593476ca9bd069d6f37fa7846af9e53b1e01c977a17" or
+hash.sha256(0, filesize) == "df9ee47c783fbe8c3301ed519033fc92b05d7fd272d35c64b424a7e46c6da43b" or
+hash.sha256(0, filesize) == "aa2b95220c612a6a3db308e2a4ecff368f9e1f01f352cbb2b86c3d08649409c5" or
+hash.sha256(0, filesize) == "59474cd7b6da5ab5a1c5c1089ca34284b85c0dcf699a47ec94892005a8dbc360" or
+hash.sha256(0, filesize) == "def349934fd6a6cf325f11198575e289d8d6632baba8694ddad8207fc0edab66" or
+hash.sha256(0, filesize) == "384fe0433106000b19eec0178d22cf95a3961228435183939c678c2cf52bb997" or
+hash.sha256(0, filesize) == "028ebc958543ee64099a42e9bb86517cebf8cc5508adceec7e66d47c5b38236e" or
+hash.sha256(0, filesize) == "a804381f1c4917bf08a400e79ece8a1cea90c9da99f8ca158e84a5f20087e965" or
+hash.sha256(0, filesize) == "b6f51ce14ba12fd254da8fa40e7fef20b76e9df57660b66121e5f16718797320" or
+hash.sha256(0, filesize) == "af97d121098bc16100e2a70efe26dfc9d01c7d9d0dfea429417f73abe41d1772" or
+hash.sha256(0, filesize) == "85c453a01a87fde30d3ee161195a33999725992f9079860d53d265d16cb9f377" or
 hash.sha256(0, filesize) == "e7725a3b41caae172d6953f5094acb6090c5e1e6df623324edcc058072fdf1bb" or
 hash.sha256(0, filesize) == "39ec9c125306c3409303c20250d3e215fa14b11fdf2c3631543c8c42d77aa47f" or
 hash.sha256(0, filesize) == "f6db2428ba0b7d6ca024e89a82136651fe9f8030d6f8a97524bf6dd67155b19c" or
@@ -385,95 +417,159 @@ hash.sha256(0, filesize) == "5642c233370052ab6052dbe141d0bff095d4abea704568a2047
 hash.sha256(0, filesize) == "5e8598d9982beb1b402e92f9dc56b2df4e7d7b4a60428ecf21f6b485a83030e5" or
 hash.sha256(0, filesize) == "9e8e976c0c210a4190d3f9d9b186a74d2fd0a96fd1a52d05960034d6644bdf7a" or
 hash.sha256(0, filesize) == "ab6cfa0c76c5880263490f20b7d220b3d12622ce835f0d13027b386ae7ee8f17" or
-hash.sha256(0, filesize) == "270d9b676e53b581c1fa62d554744e462fe02f889099610a50b7cbbc3eb79b5e" or
-hash.sha256(0, filesize) == "72aba86bfcd5d093d1419160f46e932e26f183671f4e02a4054dfbd4d3efb77e" or
-hash.sha256(0, filesize) == "10cc39f9d2b5bd58ec98eb96a67878bedb14374ee3ba9bc0d5aab999d4d97f81" or
-hash.sha256(0, filesize) == "bf6e01488f38ee74cf5046fdfeeddc6ad70de3dc676420351772e9a767082c27" or
-hash.sha256(0, filesize) == "bd1920ce5e9f321deb16e2de21175be750b75623217e39476ac2a3b0bd380812" or
-hash.sha256(0, filesize) == "da038bd553dcd6a00706ce00cb0c89fd4b34e737cce30a157dcb6afb41b81742" or
-hash.sha256(0, filesize) == "ed1d5ff9293f7d6203b27361fc1710886aed522597b8f3e08522683db33dc952" or
-hash.sha256(0, filesize) == "e69df25d214d7c6289d699d2759b1714834e51b5a5f35e95045c9857c3f1d2d2" or
-hash.sha256(0, filesize) == "2cd1bdcd1148c235402be4301551b33ddffcaf36057c3435d244e621d53d0c8e" or
-hash.sha256(0, filesize) == "9f87a20f5d4d0f416ccf93318f43ed6704641d21736ad34e4eb9a5b035711207" or
-hash.sha256(0, filesize) == "b45d65fbc9d6147dd1ebe5137bab9f5ac2c56ff9100baba684f1346b5d861c1e" or
-hash.sha256(0, filesize) == "44e2d313117fd0a722a7038da12ea529b1e670d0b953a5bdaaa299fa175e1052" or
-hash.sha256(0, filesize) == "12a126ba71c530cfc460e7fc018be1dfe154e1f52c132d1e1f2800636f2d212e" or
-hash.sha256(0, filesize) == "c02575dfb004b55e7db58eb3f03c37a284b558b0d289cfdb95834178f161ee39" or
-hash.sha256(0, filesize) == "5d6b149f4437b80091f8d6d755714fa320c57b0c6d3102aa805b6daacd01a29c" or
-hash.sha256(0, filesize) == "8c7f39c15d73fcbb34d742d1b0dccfcc587ee4e5e3362ac95a79cb15613c0df1" or
-hash.sha256(0, filesize) == "f401dfd535f5bf376f2f562a35e6aa1c1ff07b32f1f73c05c9ab4e5707b0bee5" or
-hash.sha256(0, filesize) == "acf7bd2d231a075090b23bbe305ce4b3207bd5d0c88d7b9bbbf8fe8d5a54a1ff" or
-hash.sha256(0, filesize) == "daf717f59bdaf430c37be0067c0250009212f851c52e52a0fc801510a0f7983d" or
-hash.sha256(0, filesize) == "4a99c6a8eb5bac7bd7d72a2446ba982ffa64d22d80eb5e5888da74d7093efa77" or
-hash.sha256(0, filesize) == "55377bf19fa209cfe1b4172e3c784656381f050fc6bf09aef0b7363320e94d6a" or
-hash.sha256(0, filesize) == "1caa804fb51855f42a320003f17e550a0d5308b4bdba7e9a22ed1c70a5468508" or
-hash.sha256(0, filesize) == "eed6d964ea642839a64a0de0655edec1adf31515579b2b8419b3315519f67903" or
-hash.sha256(0, filesize) == "f0d5a15cf89b7ae2f1625bc2611ee8181639630771a58f1886d36794b512a4a1" or
-hash.sha256(0, filesize) == "c7c703dbd66d6b2d5f751ddf4bdb1bd6ca589448bcf6d7bad30bf20fb115b647" or
-hash.sha256(0, filesize) == "dff411980dc822604b152d3cd2493a8cec27df1a356b7b18ce02dfa1bf7e76a2" or
-hash.sha256(0, filesize) == "9ace344f9c71bb679f829ee89bf8f2161ce56a14f810c2176e56a2d26f536e54" or
-hash.sha256(0, filesize) == "41f27a3ef2ef5e05cc48b5ca620409eef38c73290da233131b99a1ee1122e9d3" or
-hash.sha256(0, filesize) == "f4df01d1e191834fc729d27ed9cb865949aa38fb6b9d9f87edfc20581902edd9" or
-hash.sha256(0, filesize) == "03ae912612e58b7eb1b1d99b8a40f52a6e8b5b7e7402922254ea2c57752000c7" or
-hash.sha256(0, filesize) == "9ba04e43bb47601439a0cb10f6607a5ffd2c177fc4f2e44b659fc486db167c2c" or
-hash.sha256(0, filesize) == "5596e11c219a8bbe4e93b230ddb4032448f661b1110c57e62544222a48bf6c99" or
-hash.sha256(0, filesize) == "3220791c9831614dfc3cee34dca0c748d265e70655858512d6fda6c2471aa659" or
-hash.sha256(0, filesize) == "12bb9755c3d05e996b0a5722cce063538944c0f5d382796b418335809272bcf7" or
-hash.sha256(0, filesize) == "71f972b919d21f30e2552b03e30a86790d7fc3318ec50b02a5a3e25459056369" or
-hash.sha256(0, filesize) == "f2dccfb265fa7cef6cf0f91d620dbabaa521c62a996b63f01c8822dbde2ba036" or
-hash.sha256(0, filesize) == "d1d8dc953673c788beb611c1bf4ce9feedd41944a405ab92a75081a0608bc5e5" or
-hash.sha256(0, filesize) == "12ea40e07280bb604f87f60cc48eb99352bb3dc1a98589950119d2f771f72736" or
-hash.sha256(0, filesize) == "8c43b3d2fba2da219ff22fab2302890c231f7904851b8513f4810afdb58608db" or
-hash.sha256(0, filesize) == "df8dbc5774f3baa5fa7df0826b09a5c1aaef78ac055a3b2c78923fe69eb7abbe" or
-hash.sha256(0, filesize) == "2d08f8b7231d70b6da7a4142378c15d65ad60368532328a678fdbc33f9f78ccf" or
-hash.sha256(0, filesize) == "502e1c324c6ea9646cbc72100d6a28f12f1ea496d68b7eb7901468d344c68750" or
-hash.sha256(0, filesize) == "f3a2e829ee55db633771a2ab61a975abc0507cb82c2def1f607169239070fd62" or
-hash.sha256(0, filesize) == "27e1b87f2d5e48e291ddcb986f5b21c3d33e3e1b7b0f25ecf97e294b41c6f5bc" or
-hash.sha256(0, filesize) == "b6789aee8b5c5042a3f7c6d13371b12b52891685efdce6ab81d3ec5aab1a045f" or
-hash.sha256(0, filesize) == "5fbd160c6e79522f5ec91beb0762a4f1d3c20699bb07e7cda97d3beb101dff1a" or
-hash.sha256(0, filesize) == "7561f35c1cbf4d49ffb1a12491615e36655b78f6a38f8d1a1b1274e77bac8df2" or
-hash.sha256(0, filesize) == "67cc61295b44a886b17e9961d646247a4bfce19d78854137422421f709b14f73" or
-hash.sha256(0, filesize) == "476689c1c19781c462bcc98000c3f3d2dc63f24d5ccf0077a14ed2cde587108b" or
-hash.sha256(0, filesize) == "858d7052dd95b4c3e44ad3e4a062e09d1899164771d9a1e7a753bb6dbc46a238" or
-hash.sha256(0, filesize) == "fdd023062dce683881000f075847933b8c341399afc6f1d3d878ddbc13562cf0" or
-hash.sha256(0, filesize) == "beda3c5c2f69823df0e3df315881c1c750345a51483b57e9b9916e1651d49c3d" or
-hash.sha256(0, filesize) == "807ded9532e0e66169a3341f0a2c5d75b06349d33a1b4cfdee4eaf28a6b3c2a5" or
-hash.sha256(0, filesize) == "b654b4152101b681de1e58e4c33af0efea511f9eef8ad5754f6cd2d5a5b55a47" or
-hash.sha256(0, filesize) == "60d35d7119766085c76ad26cdf98fc84c05c964f0d18f5a9b6e96efe50389da2" or
-hash.sha256(0, filesize) == "f5f7d4d4727be1df9678561e610e7964553b71b422c95a68deb39140aebd3978" or
-hash.sha256(0, filesize) == "299df5285ec30ffa461474a317946bdd6cc32077dd43f7f5f556357d03bffad5" or
-hash.sha256(0, filesize) == "2e1ba30c556f14bc5cf4ca23c27fbf50aacbfc31b56638467a75b8331d892cb9" or
-hash.sha256(0, filesize) == "a1f14a74ff34ef92d00903bbda3ad1bb7502628248e44f30e63e0df868fc3ba0" or
-hash.sha256(0, filesize) == "fe2e5b9e0b6e8bdf2f8a0d6905df5f36ef4d424141d3afad13ec77b4eb2ee378" or
-hash.sha256(0, filesize) == "48ed9d5e32d207ee9d516378584ef9232e10d37ed9db11fa6446be9ba307f868" or
-hash.sha256(0, filesize) == "34381f983c4c02d83bae967e2191f736cf52df2cf38f8ffdeb733aa5b76fd37e" or
-hash.sha256(0, filesize) == "0d63de3148dc3037625b4e0a3a69c24c56aca458076e96f3249463a3c51e0c1c" or
-hash.sha256(0, filesize) == "4447a16719aef7c5d64f43decbf19e7f8bb68496b5f763ec0e33cb806cbccba6" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_ONLYLOGGER_exe
+rule IOC_NA_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_ONLYLOGGER_LAB"
-date_IOC = "2023-09-24 04:54:41"
+ref_IOC = "IOC_NA_LAB"
+date_IOC = "2023-09-25 05:40:29"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "ONLYLOGGER"
+threat = "NA"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "2c16200c3d0555be6c757bbebcf4c4015ec93df5f77dbfa71201130237463e8e" or
-hash.sha256(0, filesize) == "93fd64f45f9e672c1cf11d5ea78356e8fb5862ffddeb9819d8886137c87ed3c7" or
-hash.sha256(0, filesize) == "b4c2c0bc21a4740b9b4949688c618a22008e630879faa8e87c488f44bfc1ad3a" or
-hash.sha256(0, filesize) == "5e32d15eca9aa02ea00b0fab9db99e52fc0c90332cd653369d12d0a3b0152427" or
-hash.sha256(0, filesize) == "55beaf1f66b9a21eb32a5820d7b63911974c057c2fc46af82455b7ffbaa0bda1" or
+hash.sha256(0, filesize) == "1512b2dba937a07280ca280aa17bca28f327d04f267668e175f087612ed0003c" or
+hash.sha256(0, filesize) == "d35b9869da6a1894cb3f3d3e4808eadff9adf9b27677194d3f896fcbcddffacc" or
+hash.sha256(0, filesize) == "9c775cb02c4555ea5d706a762885aee1bddee17488224841ebaef51efac8ca68" or
+hash.sha256(0, filesize) == "df14cd5015a1c9b83818e71e34ae93fac428a4b32957685853473a37e6a28cac" or
+hash.sha256(0, filesize) == "3edfebdf7492e8fdda25e4f8d92e7bbc3d5d5a32bb5c6fa116d914ddeea68442" or
+hash.sha256(0, filesize) == "ceaec139a9370a4cd4eca876e7c4b3d51a013d3739b3f4d526fdfeab27cd2fc2" or
+hash.sha256(0, filesize) == "0b962ad02e8eef3c717ce6fcfda9587f92ebe9e7ed6ee93be6bc1103daa4e8bf" or
+hash.sha256(0, filesize) == "0baa2d4181de6ef73fefab4d83926e92e20bea4ea2401f79b9bb0014a63d559f" or
+hash.sha256(0, filesize) == "20afd54c9aeb0763cf13bfafe4ec5d0eb94267a52a6797f464dce6b8cc941a03" or
+hash.sha256(0, filesize) == "ad3d0baaaf1aecbff668d96f6b33d13547cdce3f3ac67e438fd91966194128e7" or
+hash.sha256(0, filesize) == "706224d01959812281290adc2f43521e5d38d0c3a556b381b8cbac2c2aa90e82" or
+hash.sha256(0, filesize) == "ce2c5f37b85285e81a13b7daf1915e647ede5d59bbf646733e7e35e3f6a2022b" or
+hash.sha256(0, filesize) == "7b8de53f96ac0dafb7095d9daa99d7e0662707816347094f7f6ff3fe870c099d" or
+hash.sha256(0, filesize) == "b47a7ae52b4d92dd366b84284903cf8a7f3738201d04bc5dff0fc3fe8024a403" or
+hash.sha256(0, filesize) == "7a60541acfe55640d7b996ca858b9631023bb98dde8e242b294903a9826870a9" or
+hash.sha256(0, filesize) == "122aede8eb8156db610c8611c358b7a2a996b4f127dd074bbc0da10efd3fd6a8" or
+hash.sha256(0, filesize) == "f483cd8ec805281238b7bb4c4cc1f408b9e6f38d2ecc635c7b8e06a3c6920be5" or
+hash.sha256(0, filesize) == "f68cc9e29f1ecfff3aa27db553bb3cfb144db3a13b34e691cfc8cd0844c23d32" or
+hash.sha256(0, filesize) == "8721a216942198e27e76859d4be40f5bdd239c8af6db0589903e409173b68cd0" or
+hash.sha256(0, filesize) == "ae14b287be4c2cb072802d65693beeb9efecefd6e6de5994abe49546b8ca0308" or
+hash.sha256(0, filesize) == "cb7dd57456c0999dc83460017de47aafffce216e4bbd93b70bea747fba1324aa" or
+hash.sha256(0, filesize) == "a1881b33460bb0c102031ce4bbffadd908e9308d26c8b1252fdd09c70df2a7ff" or
+hash.sha256(0, filesize) == "1f3d4a141c441211c8bbfa33e2108365a109b490c3f648538a5dd96cafd23425" or
+hash.sha256(0, filesize) == "d376fb96ca6decfbf4eaef78da8fbf5238dd1747cc57f8571ef3086fab9cd15c" or
+hash.sha256(0, filesize) == "11e793894718ace16fe64581c06a158677a96c5c9eee21f06baf3b6b69ff4911" or
+hash.sha256(0, filesize) == "bcd6488842c8d8a1a310284a9cefd0b831693275428a1cd646bde4bcff4b2ef0" or
+hash.sha256(0, filesize) == "de16a9b873beb407c3a3635283fe24846541045c9f5dfa1d496d6ef5828fccb2" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_AGENTTESLA_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_AGENTTESLA_LAB"
+date_IOC = "2023-09-25 02:34:30"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "AGENTTESLA"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "d1c30d9e24b4916ac3fdfe60b89836014c2b24e15c5729088fc770567e315693" or
+hash.sha256(0, filesize) == "233761dbbb34df3ef5d1e0e6507d8e1b21a6715e5f1d00c17aad6321ff5a0121" or
+hash.sha256(0, filesize) == "a931fbbe503c7f526fb26b7d37c098afc5bd8ee3da2fbcf774cef80917f204e9" or
+hash.sha256(0, filesize) == "3f68d49b10b78abebff4fe1624c64e2f9108a7a776d945ac71a046c23f85740c" or
+hash.sha256(0, filesize) == "28accd12f705c60eedcd43c660831eea4319520cd4616f069f05f8e4c22f8e0f" or
+hash.sha256(0, filesize) == "be53b6f5ff15575799a0a929be641c79c173fa0b6de9c95f0ac524c10c1b9c5d" or
+hash.sha256(0, filesize) == "3aa409bc939bc8f42a7cd90af7fbd01c3e3c0b943a2988224b439df18ec3d3b5" or
+hash.sha256(0, filesize) == "b03290a58e076aeff5df1b1724931df5962ed9ff9ecb7d0d0b1e141072a44346" or
+hash.sha256(0, filesize) == "61f4eee705342f7e875adc36c259693ec40a7682db74ab040b79dd189fffdf5a" or
+hash.sha256(0, filesize) == "1e58093d8f9fbd98920435ef868b14e507c33b137b2f9d415f250334db8c2d65" or
+hash.sha256(0, filesize) == "b89fe3a178283fbd51ed71bd488e079a81dff40fc7124f57540e98540dce28a1" or
+hash.sha256(0, filesize) == "74f6d7ec2dc949c022763519c1f4cadeb0e9072246f710e70e4c2e6c3f5b5e77" or
+hash.sha256(0, filesize) == "15a4c64ec2cdc0f9b77763c7ad7b0181e5852ed5e74d1090e6112a9f05d34e8a" or
+hash.sha256(0, filesize) == "656e4187491de09beaedb58fdb7d84b87b0a17d119c9721ad13b020bf9465e94" or
+hash.sha256(0, filesize) == "4fca2d0f404957982464f69b813c6970f4ca4a3f8f6c855a36f5a8cead5874b5" or
+hash.sha256(0, filesize) == "f594785f5e53cbd721f6d848329765aaca8b3527c79d75eb5cfb013ed7cf7cb1" or
+hash.sha256(0, filesize) == "8b6a0095db17c78fae380baf4c9519dcb715569125ff2db30306b4ed05a07d62" or
+hash.sha256(0, filesize) == "97c5378697d6d7c1ca7666266f13a6328590c35021c553dce46b64936c9edcb7" or
+hash.sha256(0, filesize) == "6ecddfda84f61c1cc57d2da7239b543ef1613832ddeb223e341e8b57fc614ac2" or
+hash.sha256(0, filesize) == "c67eaf3680501fe3d618cdd5890904fe062ca9ae08ce684849f524454e2f3214" or
+hash.sha256(0, filesize) == "3dbc68ad8ed61358bd1d7d2c59d72a42b23f793e7fe1535cabdfee4c88ba8f4c" or
+hash.sha256(0, filesize) == "22ffd092b8937ae2de6c9f5e8792b476fcd39c582a401cbcc01f2ec30dfe8c7b" or
+hash.sha256(0, filesize) == "751dbee7818c202e60ffa8d060cc3c7c05e4ccda824569381c01a948364a8a96" or
+hash.sha256(0, filesize) == "6878ad47c529ba85671d32887c963e41daf6d4e2dc4172c3b21195a0a4e1c639" or
+hash.sha256(0, filesize) == "fa6cfed07797c6a3fc1962de2c17bc2065431f4fdfa209b77d8a7f28051ec2d8" or
+hash.sha256(0, filesize) == "ba5e5413b9cea2326321004b3932da9fcf12f58fd2d9f5b2b111c846bc22e4eb" or
+hash.sha256(0, filesize) == "d0bcfaba75056d8d1e308e4088122850eea75007f191b5c8d9aac67e8cd0dfe3" or
+hash.sha256(0, filesize) == "a92454653447052d1a4d2342adeae2ae74a0499868a6fbd7834773b47b368cb7" or
+hash.sha256(0, filesize) == "5ea704d5050d0451c278d0a8728b251f71114e042f4bed6d2180509bc2955aad" or
+hash.sha256(0, filesize) == "a951a5aa494aaadf661e560d2e8c2a5f677ea5736009479a44731c971ede3b9e" or
+hash.sha256(0, filesize) == "528aceae347b69455dfb59afd54770e03a3ff27a7c3b38f0cbe79ffb4b317ffa" or
+hash.sha256(0, filesize) == "68be47662747cc082d2d1df710e743ac1e2c59a4b77ab2779a0bd80127ea733e" or
+hash.sha256(0, filesize) == "551041e145d0651f4c6779f98aede3aaca21dff3f0b6458e5faea34c33a6cd76" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_RECORDBREAKER_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_RECORDBREAKER_LAB"
+date_IOC = "2023-09-24 09:10:30"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "RECORDBREAKER"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "abcbbdb2a2eb219a82c3f446f74ac6ef93a3deb11e4c277dee8c106792d7b783" or
+hash.sha256(0, filesize) == "39c1944344d6709fd7caa9539c0f02577c260ef9cd67ae3ec6551c81d97eb2a0" or
+hash.sha256(0, filesize) == "1406293eef687c73d84fff0be7d1a47bc973b79fb4b208dc4a31f311684e2bf8" or
+hash.sha256(0, filesize) == "f8428d6c7d75839c0e9f922021ee2e08cb3091d2bbd700e40d63f69a0aa4ccca" or
+hash.sha256(0, filesize) == "808b9cff96c4777439f0e8e8fe1be539ab290fcd7e1587d51d151cbe162231e6" or
+hash.sha256(0, filesize) == "55de44d4b1b6a3f2b7b38cb908fba92c852530dbb8d273c2c86a7f490f5ffa5f" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_NA_elf
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_NA_LAB"
+date_IOC = "2023-09-24 17:32:21"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "NA"
+file_type = "elf"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "ad6678b59f632ef0215cbfd49303a3719c6650c26ae5c16d4e14bade8ed1c115" or
+hash.sha256(0, filesize) == "9d59325913104d1e20b500b2ae4084f8e1966199c4b4faa515deb27f0a78bf3b" or
+hash.sha256(0, filesize) == "5ae9fe9208999d8923215b885b708c763203ead199f082e9212ba01ceb3a8012" or
+hash.sha256(0, filesize) == "5ed7b290734ce298cd9610e2158354eb15ef8ed7794cbfaf9943c5e55d08a3cf" or
+hash.sha256(0, filesize) == "d6f861971aee196fdb9f506d1887c34765a2af8e33b23d4495c7f34ad688fab8" or
+hash.sha256(0, filesize) == "646fa4e0ef8ff0b0c5f56727851906f0e8bdebbaccb7b5a328747a11deefbe6f" or
+hash.sha256(0, filesize) == "504602b384ca6337eb358d38be028d818ff84892af5191d709fcf1d1f19735fc" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
@@ -483,7 +579,7 @@ rule IOC_REDLINESTEALER_exe
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_REDLINESTEALER_LAB"
-date_IOC = "2023-09-23 07:20:14"
+date_IOC = "2023-09-24 03:29:31"
 info = "Version 1.0 b"
 internal = false
 score = 99
@@ -494,6 +590,28 @@ comment = "Source : abuse.ch"
 
 
 condition:
+hash.sha256(0, filesize) == "354da50b3f098bac3aca61bb4e12dd7f14a6e430a0ed48cfe53cc7f0fbce99aa" or
+hash.sha256(0, filesize) == "d331612139ce264eb3770d828b8242a1e04e8a81af38fc3300647deb6a896060" or
+hash.sha256(0, filesize) == "ce18d1eb13dc622b6a45d8326daab16c57334a64509f85979f3ec3f9058f57a5" or
+hash.sha256(0, filesize) == "4d92ca37eb8f53ced9c9a871df34bfa7fa207ef57989eaa4acbe053ac37decdb" or
+hash.sha256(0, filesize) == "7ee6104f07480d05cec25ec7e995ffefee5ff0c12c430e6060213bb050e0da93" or
+hash.sha256(0, filesize) == "cf6ef50b611457d26b4f02e43cbe55909acb7d7d243cdcc92355d36ac8c0d8fd" or
+hash.sha256(0, filesize) == "5b1b28098751cd28e5bb3f50757a25e613e58a9b390c64aba2dac8248b1cec8e" or
+hash.sha256(0, filesize) == "49dd38c8ad176cb5d26a742ee0feda3a00fa36c1348219a6573da215cd6ddff4" or
+hash.sha256(0, filesize) == "21af47b60bf88124650097f3ccc91ce31df5d23ce452d5458ecf0acaff4bf6df" or
+hash.sha256(0, filesize) == "9ee4476b2f86ad59a74e4fb093e70dad5165369865f52cac816b5dbb57dac6b6" or
+hash.sha256(0, filesize) == "7cbe1968e050a99fac6876e6497937895ad91e29873af401b290b11575a40b31" or
+hash.sha256(0, filesize) == "7e125512e333333c07a27e408ce6d143afff960aec73ece55c575c69f995b3c2" or
+hash.sha256(0, filesize) == "60654f277dee97fba63685cde51b03cf797e67333b3257b17f07961d33602947" or
+hash.sha256(0, filesize) == "b7427f848185edeb52b5de80debd103ac201709afd64e3bd854c86969b821a2d" or
+hash.sha256(0, filesize) == "d34f40911e49c6b8c306a50852bd42a2864e719627c2310997dfaf6e5f327cac" or
+hash.sha256(0, filesize) == "b7bae8c3d2721f387a3e6316f8fb83bcc08e4b46767f86fa46d018b6cfc6f161" or
+hash.sha256(0, filesize) == "0d8c4cfe4ce016aee96975447b66763f4297a212ca3a6627c79f28cbcd5752e8" or
+hash.sha256(0, filesize) == "fd36eff47ab8eefc9645f11b38a2a7c11ce9b36a76fd8f5f3c1aebe4d4c57c6d" or
+hash.sha256(0, filesize) == "4796cf8c6eab52df224915dd04ecda81a30384c53e284e6dae7c55a3cae9f976" or
+hash.sha256(0, filesize) == "04e7496a49d95613f528d9c7858c4176de858ace783414b6d03a9595835373ab" or
+hash.sha256(0, filesize) == "37162a151d67a271fa53fe8a32805ba3bcafeada5687e25ec55cf1d81840b2fd" or
+hash.sha256(0, filesize) == "d9d93ecbdd4afca82d80c8e28f3e97e5cd0763ce59acaf2d1286ef85eca37a50" or
 hash.sha256(0, filesize) == "1de54a669a3dbe044011622e37d32e05ca16bd67dfcb54e0a1d7983615bb8ac0" or
 hash.sha256(0, filesize) == "24a940b881277036f482297dac05f2babaff73d8b9731bb8876d328ad1c3bd36" or
 hash.sha256(0, filesize) == "18a66e66e913be5a3980009b8740b2f3cc1a8f06d02ed5f10e96ad787d9f24c6" or
@@ -528,74 +646,310 @@ hash.sha256(0, filesize) == "4c2d4103c69fe501f32315c14aa4c774352c4a25e570eb72cec
 hash.sha256(0, filesize) == "d788b57c63f3c366d5771b86feb1f0c0a394656feefef3f6f18bda1f8380d4e4" or
 hash.sha256(0, filesize) == "cb75c635646eefd4968b22a2daf07a4197278a4c10271b5d56618199dcf0f46d" or
 hash.sha256(0, filesize) == "926b994a4817aa4c1bb4a993a173ec82f112f145d406ccdfa236c52d8a48ab85" or
-hash.sha256(0, filesize) == "1fb435fc2ca0d321fdeb0db74e46700cf6e1909a7d9243ffe45b24fcea9bc80b" or
-hash.sha256(0, filesize) == "f6e4e507c58b29c405b98d90f85fe673a56743a8d7a1bd1f371a8d491000cb73" or
-hash.sha256(0, filesize) == "a33ec26c7f1dbc1b4bf33f9692fdb267faf8748a66de2cf5f3342575c29e7dee" or
-hash.sha256(0, filesize) == "8d07a2a48e4c8c3adc8ce2e5b6c5427c6b9a4c847431e208fb52aab51cde499c" or
-hash.sha256(0, filesize) == "2859265c38e2c246d998c7126acc83a60511e864e942edda3975130228e00367" or
-hash.sha256(0, filesize) == "a7dbe6bbc3e54f311a6aff5abe94c1659cbbb4b18b6388530d3a5090ad92b49c" or
-hash.sha256(0, filesize) == "6be57566a72c81a9336d39b56627c14aa6a04e604954b71a84e83125171a742c" or
-hash.sha256(0, filesize) == "d1be7f5d28a5c648ead43ea2cccc6221251f638457879502560a3c9b62f7fee8" or
-hash.sha256(0, filesize) == "42783825acdd36a5727054e95dd6638d21a6cf7fb2a7c1bffe4d31b2a324d1c7" or
-hash.sha256(0, filesize) == "d7e9a4c0424f6ee731812db8cbf90894d85dfd76ce41174a9472adb62d556825" or
-hash.sha256(0, filesize) == "8f89153fc26e75380795a57e39456803d45d90ed13a6595b85a3ba3eef452261" or
-hash.sha256(0, filesize) == "fc61e72d44fa366c2bc5268491c547148c982a294a05e1822af59c8e647471a8" or
-hash.sha256(0, filesize) == "34bd2ce2e8930770f19ca6e9f3b1a32d33711712eb07b54d43b2968ff251a98b" or
-hash.sha256(0, filesize) == "afc28838d40c3c616b8384d280d6aeca6ab9ad99ce79ad264ab69ac06a276e75" or
-hash.sha256(0, filesize) == "c59a46735d65ee492c4d93b34d0e5523e1a07dd23620ee64ed6306e9c17bced3" or
-hash.sha256(0, filesize) == "0f6a215bc887b449d7d64c94cbde6b4e25c27d2a919c8b8bf53c46b09da71857" or
-hash.sha256(0, filesize) == "70c38d1be3249f03e593da38ce9ae3ba1de2375a03ae8becda9036de762a685a" or
-hash.sha256(0, filesize) == "91c200d90230a6547ff8d0ff96ebebc2703e4da9d02150f6f7118d2b9f470e1d" or
-hash.sha256(0, filesize) == "487e2c93c2282b6f62f1adb2137683332782098f17d0aa4c917cf3a1cdcfc59a" or
-hash.sha256(0, filesize) == "e1c29f91924be94ceb6cbc2aecbd34ccdd9b2761d4b1c880e91bd0b053bbc79a" or
-hash.sha256(0, filesize) == "534ab8b76132ebfe8195b9a784c641fd41cc0d8b5d471afbd09954e540a19a59" or
-hash.sha256(0, filesize) == "6a042cec7ea5265c3503b1408d306c4beb4cc22e443b722c80f38f3d3730b793" or
-hash.sha256(0, filesize) == "f03d61a1a18425b60d22bf34ab1e6b10747fba7b30006d32138161f76159cd42" or
-hash.sha256(0, filesize) == "6786f6e1481055126e4eee4959aa0dc3c6f54dcd7fdc2f6f64779e5960c93db5" or
-hash.sha256(0, filesize) == "6f2dd8e2ec2377352cae50fcc36b7b5808468497ddb0eed800353d816dad9777" or
-hash.sha256(0, filesize) == "2e98503c281cc75d3ca1c1b8f7001c94994c288e84057cfaf3a47480dcebcae9" or
-hash.sha256(0, filesize) == "06885bf12f86e3ee81bb35ea8c6e30cb3bb12d6f887f3aecc3045dfee96b48ef" or
-hash.sha256(0, filesize) == "9f63036b4bbe6516c7b6331542cbd89d348aaab97c8b7415166a7a0cb98c7e0d" or
-hash.sha256(0, filesize) == "6f68ce28131631749a65b20be914735f3511e7b03a0899f1c5855797116dd0ee" or
-hash.sha256(0, filesize) == "db53c47c09fa57e595208f97a9e3762fd7517a87df4de971bde05154b3f8cbb3" or
-hash.sha256(0, filesize) == "16b88051fd1e27d08d1408bb51002dd25edb88292807a92ee25ba5f4c0895b8d" or
-hash.sha256(0, filesize) == "3d3cfb9c6d27033015b99a77940d18f02b4c43cea1a7767fc998c72e672ac13b" or
-hash.sha256(0, filesize) == "3f9a216c6dbf8b3ae75dd8c019e8c8479f2ab04551b22fbdacfbe8e3d149d2d9" or
-hash.sha256(0, filesize) == "8472a0c4460e8229c2098b24a773266a7e665f1c04736c5e7ca6423a0784be24" or
-hash.sha256(0, filesize) == "bffaea76090bc73c297f55b712f4facdd97c097d69b64fad2698d1aff841ffe4" or
-hash.sha256(0, filesize) == "e5a9a08d022f98ac13ad98afb6b72af5fa733598b34efc5c64f3753c2058d177" or
-hash.sha256(0, filesize) == "b7215d29651d883138e7000f2568418b02cb62350924f78ec75b7c7f0d3a9a72" or
-hash.sha256(0, filesize) == "fc86bee68f9c2dd6e5110ebfd66a74f9823197ca196858c81753facd756568a3" or
-hash.sha256(0, filesize) == "75e3d6d69e870af818c6e8d7977d656957b2244739f375e114bd5ae6065fc5b9" or
-hash.sha256(0, filesize) == "83af37abbff9157d10d89b307868a2df6c57c22da80bcfa1dc221cb403993890" or
-hash.sha256(0, filesize) == "a8732c7648d46289f08418bf95a07691f4df340b3fa7111fb1b7a31d6c43122c" or
-hash.sha256(0, filesize) == "b2893e7a59bb95277f3722afc72b476b09a9eacce5d6e4b6ef4fcfd537278dad" or
-hash.sha256(0, filesize) == "033a9a631d8dfa52532c2bfd8f1ee1648f6f72329b9c08b682bb6cdbd5afe865" or
-hash.sha256(0, filesize) == "b3c9aff1dfad794a39af7521cefb3ba110befd5c169b561db31385512662db2f" or
-hash.sha256(0, filesize) == "193b4c7d1fc068516bd8769e7c233afe88e165d9c5a783f5de0d98611d5c84c4" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_NA_elf
+rule IOC_SMOKE_LOADER_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_SMOKE_LOADER_LAB"
+date_IOC = "2023-09-24 03:29:32"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "SMOKE_LOADER"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "7827ebf2c67e413ba80e41ec6d7d331a43d99e4107e20e9dc2850bccb9f33c1d" or
+hash.sha256(0, filesize) == "c2fb2940935ea5f3ce7817171c7bf160d7ca4b6388e0dcc71dd32e39e0220a39" or
+hash.sha256(0, filesize) == "f2f444f2d6b0fa864da457731a5d47966a4ab0f47b684c8c5c652356179863c7" or
+hash.sha256(0, filesize) == "46ab939c8a747eb5e24012593cd89c0744940834dcf4ef028f5d908a98e073b3" or
+hash.sha256(0, filesize) == "9e0496fdc12023f5d4187523ded3cf3698577451d5b03f766d20b3ab3597ab56" or
+hash.sha256(0, filesize) == "a6c5f2f669e038e6af76ae2341f0c61a290d163823404e7ef71ef5214076a9d2" or
+hash.sha256(0, filesize) == "e3863e4304db2fadb48a0589ca8851c6d2186cb5e5ccd219b2bf3e5be18fa074" or
+hash.sha256(0, filesize) == "d2f8260f6c20bab0efc8093ffad73d2edb702a53313adb778788d68c3e0248b1" or
+hash.sha256(0, filesize) == "e4f27ff2d06030334d4ab26fc6acb76dfe874eb3901a11826d8f49884c5a47e4" or
+hash.sha256(0, filesize) == "f21c6190f1b5ad0e9de92ac6d341f7e2143ac5b3ea62b481a79336afbe6444ae" or
+hash.sha256(0, filesize) == "75da61b3e9dee861137ba25a9cff4f1b0c165eae9b0e3b3343eaabd7b0d7d84a" or
+hash.sha256(0, filesize) == "f8248a8cba20836e70d81d5f004018f32701a6c21a9c177cb83316955652a21d" or
+hash.sha256(0, filesize) == "c8b5c95a7ec5e603444c77db441c486d2477d93703b69d793285f2c1eb37b581" or
+hash.sha256(0, filesize) == "a8b83f442e659ac875961bf6a08c9df49f86b4a1a74434f5013e44c498f47877" or
+hash.sha256(0, filesize) == "ae761e0a80d71135d8b438ec91763773dcca950e0f5d33413f1b90a72173d9a4" or
+hash.sha256(0, filesize) == "7b7b88730642a23a8839968e665d119af960929dd53e4dc51b3a633bd1ae2493" or
+hash.sha256(0, filesize) == "d8b000c612b2ce9557ce07cfe8067b5d7e6bfb5039ccaedaa6df5b21cfbbf473" or
+hash.sha256(0, filesize) == "5f0c15e04c5359cd6260d91bd8c1e4f8ccb2d8d13aacaa31bdc6f1439985171f" or
+hash.sha256(0, filesize) == "71f277fda0260a2c642ff1beb54929700c1a1eaa54898e841ec911e9fe8fc1dd" or
+hash.sha256(0, filesize) == "05471dc58e71d0cf565722a23c6503e19aab894db28f61553bf136b37b896899" or
+hash.sha256(0, filesize) == "3a9de2062ed05cddc3db8b4258e285258d796950dee999a489c5ad1624ece1cc" or
+hash.sha256(0, filesize) == "12c0fb06a2dada74ff465cac07e70ac5282c34cbfa85f4fcf56e72b3ccbf67b4" or
+hash.sha256(0, filesize) == "76a72f4fa55c951338203687da6663bc08b4aa0a06fce7e74fdc4a8c97e63e49" or
+hash.sha256(0, filesize) == "11b587c3476c94adc8a5556916fc94e76178e8a8392430fe5bdec5a3dcd814c5" or
+hash.sha256(0, filesize) == "b6fba9803a085a82700599c71a74b024193fde59071fca8b0fb4b33fbb1171f4" or
+hash.sha256(0, filesize) == "04d0906653b1dbd99e258c1af3c76869801e1d513038d614427424a6987c6532" or
+hash.sha256(0, filesize) == "78210fa6dc7c7e8d9ad31767e978bb97ef5e7099228762043c2ed6e0f742d033" or
+hash.sha256(0, filesize) == "2e2da7d0743b4775a185e84c77c4c911140903442919a2659064c66edc65e164" or
+hash.sha256(0, filesize) == "d80b243ce613fad00db08c6614db68527af554e6d3996aa06609ba811268089b" or
+hash.sha256(0, filesize) == "17d24e3b051a6348ffa3eba949b5e30b810e854b8ac49b03ca01e48e4e969e6d" or
+hash.sha256(0, filesize) == "3dfae81691859195b2a1f0f3619081f06651931b4b01137e9536c382e95651d6" or
+hash.sha256(0, filesize) == "4b7a587a4f2e34636d12737163bf3558e3cc07895a9ea976c2597d36bf0f0e35" or
+hash.sha256(0, filesize) == "96be8ff9b843492bed68b3c607dc752173eba06304f36de400c803fd6dc4635e" or
+hash.sha256(0, filesize) == "68fcb54bf0b225c17e07412a1888465d3ea10d56a522e1e732967ae7d57afc36" or
+hash.sha256(0, filesize) == "a9745e8b2c41acee769ec0e28c1d73adb4d664a93da8724ff187bcdcb2994e12" or
+hash.sha256(0, filesize) == "f458d5f6d2b95c3c79dc44e200e7d60df06653ec29aee11a961e16a55a8b5a3a" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_REMCOSRAT_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_REMCOSRAT_LAB"
+date_IOC = "2023-09-24 21:53:58"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "REMCOSRAT"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "4ff54bc771dc97403996794c50ded1a97b000c3f6eeff64afe3d049735e6bcdc" or
+hash.sha256(0, filesize) == "84602e03565b814fac56bbc74eb914dc52dab891658b99cb209aae46ae4d972b" or
+hash.sha256(0, filesize) == "4dd39cd7e19df27e79b7aecf317eb2ff409a3d15c2abd470a055e11c3aeefb6d" or
+hash.sha256(0, filesize) == "f7838011d80f88b2b618bb27382f58ab8d96b9d6ead76c17ece8b19e2a7403a2" or
+hash.sha256(0, filesize) == "7c98f8c87f6256b929262cbbd898337fc9ae80fc0a666ae0b7c6663e1308db0a" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_AGENTTESLA_rar
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_AGENTTESLA_LAB"
+date_IOC = "2023-09-25 05:38:17"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "AGENTTESLA"
+file_type = "rar"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "b8104a21d4a884118c14b967c6a415344f636ad515778626ca058e36bb46e8dd" or
+hash.sha256(0, filesize) == "600dc96e1ab08056cacac0a94158b609a565bbd1a682be71eea704405949c80f" or
+hash.sha256(0, filesize) == "1a98f91be8bd6e6dd0cc1914e1bd866cce2a077b5fe610bd833b46d8bbccf807" or
+hash.sha256(0, filesize) == "a2b8e4a75f50f9a7ed71f12432bd3d39b98f132dfbd37cb3d4d4d8f75b3c7ecc" or
+hash.sha256(0, filesize) == "dcb132e14cb4d50b8a53bd595d07f292448807d678570c21435ce35dc9ec5aa1" or
+hash.sha256(0, filesize) == "04adb0f369df981e4464a5ae275f7a1311750904e1ad65948d26d78933a61f23" or
+hash.sha256(0, filesize) == "d16e1e1c65bc6dd45379445430fbb4314e25ad2a0931077f1240c9aab1cb825d" or
+hash.sha256(0, filesize) == "13b93e8c98451404ea35623ebc7027217cfc5e6570d05a5a8b65a35283a7be9d" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_STEALC_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_STEALC_LAB"
+date_IOC = "2023-09-24 04:23:18"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "STEALC"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "a46eba12d0ffabdc234da0cea17ed7f0c606268104e8e6208d078f698343b044" or
+hash.sha256(0, filesize) == "2970f93fdff86b1cfdce4bee35650f58bb2c8face78c7e9228ad6c697d3d5b40" or
+hash.sha256(0, filesize) == "cc51fcc9c41ebae65c0bdcd5e0b0c8558f395c02f43fb848eaa794b246dab004" or
+hash.sha256(0, filesize) == "2e6a082a870132c3c47e698398dd6fd3d7941d13737f00af1f70b730ef50ad2a" or
+hash.sha256(0, filesize) == "7c59665549676d552743527a5a96383abe8605c1e7bb2556ca32013ba9206c16" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_FORMBOOK_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_FORMBOOK_LAB"
+date_IOC = "2023-09-24 09:17:53"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "FORMBOOK"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "716cc459f4685123823a8e5fc94768b3526c0900c98a0e51c5ce4b794b6b9f8c" or
+hash.sha256(0, filesize) == "853fe8e34e777301e1a3f1f11a9d3f5207c891d1e29ebe7d2b9d6a5230a795ea" or
+hash.sha256(0, filesize) == "9cbc043b211f653116dc64d489a79918a215577985d473c56ce9ca3e4b12c2da" or
+hash.sha256(0, filesize) == "6c0a36219f289719a133e1611ce5361db5a5081250b4cb08b909c6025ae77362" or
+hash.sha256(0, filesize) == "bc9c635afe69eb896bb4baeafe61129b8a9dc07741fcc771cc67ed21ae49d9ff" or
+hash.sha256(0, filesize) == "c6674b038c3dd0485deb322f781a4148dee4e942ef41bececba162867dbcea44" or
+hash.sha256(0, filesize) == "8431d632b1a6c295b8747bb4bf54c74a4882f16800c264c8c71dce0d0f4e1d30" or
+hash.sha256(0, filesize) == "713fd650404a8c21c99095e65ec570dd73646d43481cb04d4445af289643a6b2" or
+hash.sha256(0, filesize) == "f93c2d5447563c24b8a60a7404a32155093ecf40afeb7345490bc8ba2e87cd14" or
+hash.sha256(0, filesize) == "b280b8e77999e1b90c38f33d2430000487d83f96cdf5ad21bf5bab4fdfce4cf0" or
+hash.sha256(0, filesize) == "997544439e136179eab10cc700f45ce748ac7500dcd093c7e8848966a452c31e" or
+hash.sha256(0, filesize) == "d404e5865cddbf47f6a494f9120130035b3ac5761810dc75e20bc28873327547" or
+hash.sha256(0, filesize) == "50413921860a4f9db3c3ab95c68154e9ffd12726c64a4a46d141499fcf448288" or
+hash.sha256(0, filesize) == "cf8bdc7c63175c9125d2daf9bf291f3f87661a0147828f209984b5a2f5b29e2c" or
+hash.sha256(0, filesize) == "ae5f1fa9855fd6e4511a674f0a0465df7960a757409a0d176f50b10fd14925ad" or
+hash.sha256(0, filesize) == "c59fdd5b90add682937cc8dfccfb84d460ea9f14c3dc9df895a0b8596877fb16" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_NA_msi
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_NA_LAB"
-date_IOC = "2023-09-24 00:30:46"
+date_IOC = "2023-09-24 05:34:39"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
 threat = "NA"
-file_type = "elf"
+file_type = "msi"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "646fa4e0ef8ff0b0c5f56727851906f0e8bdebbaccb7b5a328747a11deefbe6f" or
-hash.sha256(0, filesize) == "504602b384ca6337eb358d38be028d818ff84892af5191d709fcf1d1f19735fc" or
-hash.sha256(0, filesize) == "b498a04fb5b4593424c42a15abe821e6f68dd8f6cd23bdfecea80f3238eea484" or
+hash.sha256(0, filesize) == "b9aeb7f233ebc00cfe8be8832a8eb48d2c1e5bfa69cfdba4ecc9ee054e55b59f" or
+hash.sha256(0, filesize) == "08c31ed8f0574544769c024a57bc57daa9e444f57845ebd41b2a5213901d4667" or
+hash.sha256(0, filesize) == "3ecca31878c01eccb11f6b479f8390017fa5fc3a378179167f3097be906d48cc" or
+hash.sha256(0, filesize) == "87df66fc4ca5703a631f8d8528965437e348d87c137af08cda544108199ccaa7" or
+hash.sha256(0, filesize) == "ed4b05aa35f2b5b2c976bbb65d5a2079f6ab6bb166b517bec3b02470d35e4d9e" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_DARKGATE_xll
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_DARKGATE_LAB"
+date_IOC = "2023-09-25 14:48:19"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "DARKGATE"
+file_type = "xll"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "a11bd2bde079c17dc7b6793404f812830e99af2883f33ee49c01bc8c85751d50" or
+hash.sha256(0, filesize) == "141d2a8f40a7d9f0788e2426cac1f4cdbe8f236698077c8a82d92f4e3b94a0fe" or
+hash.sha256(0, filesize) == "7444ff37c2e725491977044c105fc5d2d1263b698ac435a716ad6a9ea7e57875" or
+hash.sha256(0, filesize) == "0aa13c3c38ad272391b879e4c0adac1e3bc9b54dee325d141daff44c665d4244" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_AVEMARIARAT_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_AVEMARIARAT_LAB"
+date_IOC = "2023-09-25 08:12:20"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "AVEMARIARAT"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "2da628e0bff0b81c2de3c81dc60be0084e23981c3130aea70902784a2874a7a5" or
+hash.sha256(0, filesize) == "07ba6076edec4dc2c031f7c6d001b71d86ab1b1b12c5ae729f39777ed8a7b79d" or
+hash.sha256(0, filesize) == "45666c8cb9a8b446db365c8b958c0ea1dd971a7332724f1f049b099f4fc9bdd7" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_GULOADER_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_GULOADER_LAB"
+date_IOC = "2023-09-24 21:40:45"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "GULOADER"
+file_type = "exe"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "dea7f4f2ae732c281e832cd869ee82276fa396c08b7334761db10ca35dcd0172" or
+hash.sha256(0, filesize) == "8139c59480a81ced0318dce23dde7d6e013b215b715ffc755fe05cb6feee6478" or
+hash.sha256(0, filesize) == "b4e586ae4fe78a41c0da390b0b7d9e054e93cf62e5f06f9fd62ed946aae0930c" or
+hash.sha256(0, filesize) == "efa1c2b0ae0fcb78ca07904d999e339560ed0a639281ea2936656e183dd35203" or
+hash.sha256(0, filesize) == "020b15dd44f5307a1c6391ac9e3a8e22bc396e0135358d5f14b2215de412bb0c" or
+hash.sha256(0, filesize) == "2340f884236aaa127f58da3f0cd257a6ee2aabd974bb409ec4f07ea01d5f045b" or
+hash.sha256(0, filesize) == "e111297292c0c04be52043c05b689b170d42049b087cf3fe338d38c2e2b7b567" or
+hash.sha256(0, filesize) == "269f95a5eaad3e6a79746836ab191e4586caa963735da89df1703b4af69444d3" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_IRATA_apk
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_IRATA_LAB"
+date_IOC = "2023-09-25 06:05:15"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "IRATA"
+file_type = "apk"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "92584a6157e429ed7bf38bc0c80ed510e69d02e7f5000d902fd3904711a584e8" or
+hash.sha256(0, filesize) == "c0541c3f6bbba5bf7dc24ba55b9bcad559ee28a93f8ac3ccfa2b320049d29bf3" or
+hash.sha256(0, filesize) == "39649b0fc7239ab065f5ff778d877c28e32a4417b3417d0a59d70fa8c74ccbd8" or
+hash.sha256(0, filesize) == "059f40ff1b6e32a0d570af86ca466c7a05fd333274a6e04e81e2de0f5e655cbb" or
+hash.sha256(0, filesize) == "cbe97b320afe4430d356f07759f7e352a105c72a03cbbce1cc2ede5aeb436f74" or
+hash.sha256(0, filesize) == "57eea25086acef927ac427906ce9b59a88db3df4c624abb5804c3670af41d747" or
+hash.sha256(0, filesize) == "d9a2b09130185745a2c33f06c60baa4370c9beedf7ef7bf48302ebdf6c7d3652" or
+hash.sha256(0, filesize) == "d8a1baff9f3bedc268fc275990b1f726c2167c5eb7486a7fe9a9bbd083b314b9" or
+hash.sha256(0, filesize) == "2762e34feff43dd42f1ec70f01f5a97f64cd8454a3a5c9275e97609f2cbd24c3" or
+hash.sha256(0, filesize) == "40a3d933f7f77158ecc16c11e0d16f670122bfc2e4ecfb2913485a64287ae66a" or
+hash.sha256(0, filesize) == "bcd49d63689ab0e80767eed27efe57665a8136605a275b81384a6411c5b60da6" or
+hash.sha256(0, filesize) == "8610f9d818e8f7fab8f361dc89dff0d9c68496bc7dd5f3f5b68637f4cb5be942" or
+hash.sha256(0, filesize) == "60db5d7cb8db0d94400ed62d305aaff06912b56957cfc51c061cf1ee3845ec03" or
+hash.sha256(0, filesize) == "e13574c32fe93b854b94c0d5ca310c0a40a1c18aef61faa412bec5f2f10bf82a" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
@@ -605,7 +959,7 @@ rule IOC_BACKDOOR_TEAMVIEWER_exe
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_BACKDOOR_TEAMVIEWER_LAB"
-date_IOC = "2023-09-23 16:05:17"
+date_IOC = "2023-09-24 03:30:13"
 info = "Version 1.0 b"
 internal = false
 score = 99
@@ -616,6 +970,9 @@ comment = "Source : abuse.ch"
 
 
 condition:
+hash.sha256(0, filesize) == "dc8b62f26d484155e682b99547dc4861f2bf10fe7f2c2ff29ff948295022ab66" or
+hash.sha256(0, filesize) == "d2a471fca395ec5faa4dc9638d522da081c167dd742c125dcbccd16c52f37e76" or
+hash.sha256(0, filesize) == "6ec416bd7af72ad97dd67f1dae24f2cf93b5df5eca5ca875db07bdfaa2bac87b" or
 hash.sha256(0, filesize) == "d41ca3f8c094abda9409b9c405bdcdf6eb79856a0ecf5ac3a358c2fc6760f7d4" or
 hash.sha256(0, filesize) == "e46720cac2a8956c652db483c7dd7b7fe0bcf7cdf8653d9687159e6355a17d7b" or
 hash.sha256(0, filesize) == "a503fdda1bccda3effe3f0b01135db438342faaf8259d48bb4e7912d7ee8445e" or
@@ -639,256 +996,240 @@ hash.sha256(0, filesize) == "ebaa5e1d375254fcecd2725d6dff4cfc63a054060fc04921577
 hash.sha256(0, filesize) == "6042750601f306da06be132a49ba9ebce890c6707b43b9476dee1bb23e694bd0" or
 hash.sha256(0, filesize) == "ac7a4d6eaf0008bc520d859f8283be297a1bfddd9c92584aa73b4d30cb9fff8d" or
 hash.sha256(0, filesize) == "21a15a84d1d077078c0e5e4068bad76fc88405f0ba2c556d1b36b47b04251014" or
-hash.sha256(0, filesize) == "0d38f4106acc9aeb83eb0c7017753de04dbed5d7313b649bc02d5ee5f99c146a" or
-hash.sha256(0, filesize) == "400c439c210a3646a340f0822b99b7883bf3f5abe2b102b8920f30a7538363f7" or
-hash.sha256(0, filesize) == "33b2efc76e607b0fc8fb6e55df7513a74a0cc9093aac3a82ede71b005b550149" or
-hash.sha256(0, filesize) == "8177189da97c5f66bec3a641221be486263554dbb8eac2068e67b4069ef29dec" or
-hash.sha256(0, filesize) == "5f171d0e992de905188b2403db19f0403812c3f93ab4a13a2008ec90b88d9792" or
-hash.sha256(0, filesize) == "34fd820348a9475b7d657035a162b31bc6c6aaf3198387b4c4a5194e2a7de356" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_SMOKE_LOADER_exe
+rule IOC_MYSTICSTEALER_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_SMOKE_LOADER_LAB"
-date_IOC = "2023-09-23 08:57:19"
+ref_IOC = "IOC_MYSTICSTEALER_LAB"
+date_IOC = "2023-09-24 03:29:33"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "SMOKE_LOADER"
+threat = "MYSTICSTEALER"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "3a9de2062ed05cddc3db8b4258e285258d796950dee999a489c5ad1624ece1cc" or
-hash.sha256(0, filesize) == "12c0fb06a2dada74ff465cac07e70ac5282c34cbfa85f4fcf56e72b3ccbf67b4" or
-hash.sha256(0, filesize) == "76a72f4fa55c951338203687da6663bc08b4aa0a06fce7e74fdc4a8c97e63e49" or
-hash.sha256(0, filesize) == "11b587c3476c94adc8a5556916fc94e76178e8a8392430fe5bdec5a3dcd814c5" or
-hash.sha256(0, filesize) == "b6fba9803a085a82700599c71a74b024193fde59071fca8b0fb4b33fbb1171f4" or
-hash.sha256(0, filesize) == "04d0906653b1dbd99e258c1af3c76869801e1d513038d614427424a6987c6532" or
-hash.sha256(0, filesize) == "78210fa6dc7c7e8d9ad31767e978bb97ef5e7099228762043c2ed6e0f742d033" or
-hash.sha256(0, filesize) == "2e2da7d0743b4775a185e84c77c4c911140903442919a2659064c66edc65e164" or
-hash.sha256(0, filesize) == "d80b243ce613fad00db08c6614db68527af554e6d3996aa06609ba811268089b" or
-hash.sha256(0, filesize) == "17d24e3b051a6348ffa3eba949b5e30b810e854b8ac49b03ca01e48e4e969e6d" or
-hash.sha256(0, filesize) == "3dfae81691859195b2a1f0f3619081f06651931b4b01137e9536c382e95651d6" or
-hash.sha256(0, filesize) == "4b7a587a4f2e34636d12737163bf3558e3cc07895a9ea976c2597d36bf0f0e35" or
-hash.sha256(0, filesize) == "96be8ff9b843492bed68b3c607dc752173eba06304f36de400c803fd6dc4635e" or
-hash.sha256(0, filesize) == "68fcb54bf0b225c17e07412a1888465d3ea10d56a522e1e732967ae7d57afc36" or
-hash.sha256(0, filesize) == "a9745e8b2c41acee769ec0e28c1d73adb4d664a93da8724ff187bcdcb2994e12" or
-hash.sha256(0, filesize) == "f458d5f6d2b95c3c79dc44e200e7d60df06653ec29aee11a961e16a55a8b5a3a" or
-hash.sha256(0, filesize) == "ec84ecaeb3ad309087734067a8336a8259580dda56b637b437ad994d6758a74b" or
-hash.sha256(0, filesize) == "2ecbb12bc273c1edaa0263b466a465e6ed6741679e95d479cdfeaa2668181b5a" or
-hash.sha256(0, filesize) == "30c92f406ae3062b4e005828aa69e5fc44a78e01f09c600779fe5fcb019c604c" or
-hash.sha256(0, filesize) == "cecc008c8d7603d9cda6bb9d127da6313a88f5fec9d21f894b167be0b9a9aebe" or
-hash.sha256(0, filesize) == "26878e647ffe5a7bfde7c35788afc018215907148bfa6a191ec28429abf9f74f" or
+hash.sha256(0, filesize) == "2af4ea45dd4470da2228add550f5ef2dcb4a8c4bc5808d15e6c09e4c7c140e10" or
+hash.sha256(0, filesize) == "f6f01d9bb11a8815d92f74da8ee5754a0dc789920e2f0674b3bc2d95a0f930b9" or
+hash.sha256(0, filesize) == "a84259469525b43aa247abb1db8c85e7340d219a23c4cfce4bec1083f5aa8a1a" or
+hash.sha256(0, filesize) == "c0ccbd34c765542416cb061431850cbce701bf826aa4108fbe0a0d936c050f70" or
+hash.sha256(0, filesize) == "e61135fdbe0b5b2642016b836277f9462e898854c3e58b812e0553ea70cd80c0" or
+hash.sha256(0, filesize) == "7d79a1df738e4cbfb2579a0641a2dd0221c064851e444cd941507b3d19d92d9d" or
+hash.sha256(0, filesize) == "87a9ac10ca877903a85db8ee2667af0e46ee98bbe47fc596102c672e93979939" or
+hash.sha256(0, filesize) == "c6fddaaf4faa838847944367e898c2c4c6c85c5cf3896bdf9b13b0967b364311" or
+hash.sha256(0, filesize) == "bbc8642ba9d88438607fcce1e6122e81340365270a6e99a481df12188386ce99" or
+hash.sha256(0, filesize) == "cf09a17558905d397e58c039164d0b799c4e58a31219e05750ea12e463a6a125" or
+hash.sha256(0, filesize) == "434880cab227c20e6d38726b12ce826dc8b499d25d2c8396f572b63f758afac8" or
+hash.sha256(0, filesize) == "1cf94f3a5941709a35527aaf5f1d731e4fcfecd9ad578e59a1439517b3215da1" or
+hash.sha256(0, filesize) == "ca7855a15ecd5a45c37059cb40b89364d072af976707175b24250b7fab411523" or
+hash.sha256(0, filesize) == "6f2b77f58f937a596f42f65bb7bde2b9d310c9a6b15316ef6c0573ffa2e25bbe" or
+hash.sha256(0, filesize) == "a7fe12ba9177d269eb1db5c0b55b3be01345e35e3e8d5ad0bc106c4aa268d6a6" or
+hash.sha256(0, filesize) == "29bb9454b7cbb86e061b012d9bdc6ed6759811cae8f1ea2f4ac8ffddbbbaaedc" or
+hash.sha256(0, filesize) == "687db56c8db748eb1572becb7ab6965ba572f69bbd68a8be0dbad82ff63b3ed2" or
+hash.sha256(0, filesize) == "a23f4242a76cee5433ded21e591af5e1973bb00c561b089256ceff69d154eb06" or
+hash.sha256(0, filesize) == "4f128b2da9cf6f5aa8651941b942f2ad725b1cb380c15733e5164befc5ea5d89" or
+hash.sha256(0, filesize) == "1c1232c2055ba6f3c6cca36b3b9a0ed5e18e2cef358def73b6117d8b25ea4572" or
+hash.sha256(0, filesize) == "b22be0c777ed1cf28efb837a32be0f6e1d7871ff3e02e7c6e96a3605321feaa8" or
+hash.sha256(0, filesize) == "c90b731a014d86b0d47786c43c6dd0a395762c966e5b3416dc98ad506d0cb6e7" or
+hash.sha256(0, filesize) == "0321ff9b349c1bda3dbb56c61d35ebe56ac8ac9dfbb6206048bd9b8153538d88" or
+hash.sha256(0, filesize) == "6582f18f0822d4a4f7f68e165d82f1961a0ba63d4110065606d21ee8e97d27e1" or
+hash.sha256(0, filesize) == "590e86916d371437ce1601922f857297adc4627d5756c66c0b71e11891abaa68" or
+hash.sha256(0, filesize) == "66fcbc50ae7ad897070b0c5219518239917d899fdf67b66b146557f1cdb051b4" or
+hash.sha256(0, filesize) == "b82895964dcd2bc25bd94d15882e352369d4a2e326dabccce89571f7a9c76cd6" or
+hash.sha256(0, filesize) == "7c14e7bdc43e28f6bcb11e41f3519f9bae7c4cd8e5384c9edd406dd2032b93ad" or
+hash.sha256(0, filesize) == "e8023b68d5a9c7c7dd7a0ac7a2026c7e4af92c48466a8977e3490723222ad9fd" or
+hash.sha256(0, filesize) == "94169cc275ef0c781355d2f4266114298f592cc105e6bb79e5340c586ceb9e3c" or
+hash.sha256(0, filesize) == "c6490fdc23e3922af12fc09440c84ea282526917fcc9d7a4282f8353ab760711" or
+hash.sha256(0, filesize) == "35a6f9342a6056e55acb1f7d51ba7e3ae925787201c9ebc3ba9bb455e7327153" or
+hash.sha256(0, filesize) == "1609e8b7a3a241720c2972771f848aaffc7ca107fc6cda77703e07e7fdb83b73" or
+hash.sha256(0, filesize) == "eb24bc4aed498450dd91873db7832cd33be36a94c32d4fb049bd334ab0a4a5ca" or
+hash.sha256(0, filesize) == "69bafbc99f2eb926806f5b08c251815b9e0a26f7ebf035cabe5e4b6cdbf71caf" or
+hash.sha256(0, filesize) == "3ce7ac0e6c94b12fbed733a3f3a1788a19402bdfe766fa90a0594689391c9f34" or
+hash.sha256(0, filesize) == "bfb4eee283be58d338c3be6764107238535623494c92c2dd0e96a9dcdc3b1856" or
+hash.sha256(0, filesize) == "6489251a000df2cdccdadbcc95c3434f8484b11c3c653dfa0c9c29bb03aba49f" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_GAFGYT_elf
+rule IOC_LOKI_exe
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_GAFGYT_LAB"
-date_IOC = "2023-09-23 13:24:22"
+ref_IOC = "IOC_LOKI_LAB"
+date_IOC = "2023-09-25 02:25:06"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "GAFGYT"
-file_type = "elf"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "e79f6fd8ea847e4051109a8e00088e5fd1f3ab371658691e96db888193dae3a1" or
-hash.sha256(0, filesize) == "1951ee3a215c962ead131c0a43debea3a8ddfa53988316eec3e5ea76eb511421" or
-hash.sha256(0, filesize) == "01624a4e07b1ea99636436b97f86621e1eae96a0334ac782a10fb7608c8ebfc8" or
-hash.sha256(0, filesize) == "60a3a789244235293c3064d39aa046251a7a90877e540e63610b317ad8e817a7" or
-hash.sha256(0, filesize) == "045a0e109d566f27021ab20aa6c7ceb29895a5b8512f5de0c4bdc4282971e5f9" or
-hash.sha256(0, filesize) == "c6acb46eaf0a30193208843e1e7dac1c42891c1e1bd9e965d4bd56c2ff422281" or
-hash.sha256(0, filesize) == "94415aad5086034d95320a3c57cffdf7dd238e3e889c6698d67bac399fa5a447" or
-hash.sha256(0, filesize) == "68c5bb8ba328c0020bf8d2b7dc5325b6cf4f6ad346aaa6deaff69d08811f63a0" or
-hash.sha256(0, filesize) == "cfe3adbbc9d09bc15a7e8be04c938ae2bb379489194075099eccc6e6d5d2b0f2" or
-hash.sha256(0, filesize) == "0b44d94f8eede7b52a4f9465922baf36a4f119e12718b1dab0660fa53b56a4e2" or
-hash.sha256(0, filesize) == "511e7d413fe32f3e5dd25c7dec73b737809ed4211bbb3605093b25da0acb4279" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_STEALC_exe
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_STEALC_LAB"
-date_IOC = "2023-09-23 08:52:14"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "STEALC"
+threat = "LOKI"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "2e6a082a870132c3c47e698398dd6fd3d7941d13737f00af1f70b730ef50ad2a" or
-hash.sha256(0, filesize) == "7c59665549676d552743527a5a96383abe8605c1e7bb2556ca32013ba9206c16" or
-hash.sha256(0, filesize) == "03630a63b4ecddf7f6ac5d45bca1d9d3290058ecd5c373b4f1407626c0b4dee8" or
-hash.sha256(0, filesize) == "6de33fc0084b434fb9ff8020c55cd080f6535e455e3b41a7ae7d843f410f8521" or
-hash.sha256(0, filesize) == "182e4ae0f954779178c609f70c940202bdfadf24417e30f452a6e6b2ef808af7" or
+hash.sha256(0, filesize) == "55e90517e648293862e209451265dabb3bc859b0eef09b90fd621e2b157e6aef" or
+hash.sha256(0, filesize) == "b06c31ca5664c7f9142039d5a2e4f5201404d08e4d233b594e6e69cb4e1219a5" or
+hash.sha256(0, filesize) == "3cfc212a0ab3632bcac97e2116a17a135b9541ca9aef50f778d366f9d978f702" or
+hash.sha256(0, filesize) == "ee827af3614c78745ea2cea46a635cde8ef19382000bda972239ff762b205aea" or
+hash.sha256(0, filesize) == "9e257acbd8180ed78fa998c2b6f3e69cc563d6f70066c8dbf1165d9a8b95f715" or
+hash.sha256(0, filesize) == "3f204c56a26385e98a22ad026e41fe7009266e0f50b6668485db0ef6346ab783" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_AMADEY_exe
+rule IOC_DARKGATE_vbs
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_AMADEY_LAB"
-date_IOC = "2023-09-23 19:35:14"
+ref_IOC = "IOC_DARKGATE_LAB"
+date_IOC = "2023-09-25 12:25:04"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
-threat = "AMADEY"
+threat = "DARKGATE"
+file_type = "vbs"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "a7312f01db21efd84be0a4e596fefb6ebbc388655ab19a642bf44360f1409382" or
+hash.sha256(0, filesize) == "7489261cd6b25d6544d0380bd8446748bc6769d2135e286cfeadf995704c2a70" or
+hash.sha256(0, filesize) == "76c05700db7e88ee5ecd5bf33ea27e0a78b42760253463727d955a41cb9d3fad" or
+hash.sha256(0, filesize) == "ae5992df220a719fca79f2322b6f40b43c61ff6e4e55b01183fb088953661537" or
+hash.sha256(0, filesize) == "0cd158900fe34f41e89d06f73259fc8ab24e2eaefb63c915236bf590788d89da" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_DARKGATE_lnk
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_DARKGATE_LAB"
+date_IOC = "2023-09-25 12:18:56"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "DARKGATE"
+file_type = "lnk"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "cc2f25d2caf6f4b844aee2c6c3c1747ec02ed68681b81a687948d69edfe00d24" or
+hash.sha256(0, filesize) == "b95bdb19ddab089d56de8477191425780353e69b6a5143380b455fe5e132e441" or
+hash.sha256(0, filesize) == "bf3d542f7aba2d4c00f627d9e0f48bf82acf725a2c6a188a5b2eceea2592c6a5" or
+hash.sha256(0, filesize) == "2032c7c9fe74334d76bebd34dc9183eef730d942344c1845c9dc509742897c28" or
+hash.sha256(0, filesize) == "349bdd8b76677aae443590247467ed4cb99532c5e52fa58e64db61c968f97201" or
+hash.sha256(0, filesize) == "9ad5bb0943d324d197caafe209dff379d5882caafe1628cf8779e5c58f8bb87b" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_DARKGATE_zip
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_DARKGATE_LAB"
+date_IOC = "2023-09-25 12:18:16"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "DARKGATE"
+file_type = "zip"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "35093a9f9212927ec5afa777d1acbe8626da0ddce678f3c1c64a7c26ebe03bfb" or
+hash.sha256(0, filesize) == "fe9817d786a682e352bc63be94d76adea1c7b73c7fafa087003f05b7a6922ced" or
+hash.sha256(0, filesize) == "e212b43592567aa15dda0e9332dfe444fb142c546f3443ed83c80fed81361fe2" or
+hash.sha256(0, filesize) == "15eb5ae9ca4a46dd94618a1e0680d540c46d14624abc787002981a1ac27a0465" or
+hash.sha256(0, filesize) == "e74ef46bda8b7ab06ae023ec1f5d6d080fd9af9b18332280de2435a6a5443247" or
+hash.sha256(0, filesize) == "129113303c708f4671f9c542824178e1d18d1910f4abf71f45dc76a24072925e" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_SNAKEKEYLOGGER_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_SNAKEKEYLOGGER_LAB"
+date_IOC = "2023-09-25 03:34:17"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "SNAKEKEYLOGGER"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "d36d3e3be73c9a4ef91dc2377ad84bbb26f158680a46c2512b212e8181984dee" or
-hash.sha256(0, filesize) == "3466225309654a486ac587bf9f06afd92b184a7e6c2513d588c3bfbd170e8d1a" or
-hash.sha256(0, filesize) == "e1d9c7c171cedf715b269a4a4a70667a60743e9b32389a65ebcf22b08f06b068" or
+hash.sha256(0, filesize) == "a3ba5851c9d979b726e0c0e28e3dc4e7fb896b9198c592af71791c20a6c8d081" or
+hash.sha256(0, filesize) == "55ddf189656363ac355a799830fa17a7097a80e850bd9434e33fe2e76aacd9e5" or
+hash.sha256(0, filesize) == "8b62f9dade3ae9d89c385c9f1ee2cba4fc3b0b9bae19e058133bce6f2e4a6df5" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
 
-rule IOC_IRATA_apk
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_IRATA_LAB"
-date_IOC = "2023-09-23 00:13:53"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "IRATA"
-file_type = "apk"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "be802f3f35601bf502d86916399d1d8757e9384020f8428d0632325e17e254fd" or
-hash.sha256(0, filesize) == "52ba36a6616d8fab5dca1bf15621cf8249b141374497e4d0f4fc32090619337c" or
-hash.sha256(0, filesize) == "b1d35c5386360621f95c253dc5c3854a198a19b1ccee0209c6429d6e47f11437" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_44CALIBERSTEALER_exe
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_44CALIBERSTEALER_LAB"
-date_IOC = "2023-09-23 18:43:22"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "44CALIBERSTEALER"
-file_type = "exe"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "c2ade6498bf4fe3991c76104a2d5a8ad880ab4baaf0756f707eb3b22d9734a8f" or
-hash.sha256(0, filesize) == "faeb588f777f567d3990e76a941cf406dc11f7079764325ebfee78cd7ffede29" or
-hash.sha256(0, filesize) == "d5c05da57fa20048e35e6ef498b3dd0bcb92eaea3997e8a7009b38b8a15c4e86" or
-hash.sha256(0, filesize) == "44d5555b29b7fc9df8bad33f20777a18135274b2c96e6b121734d126b46fd246" or
-hash.sha256(0, filesize) == "cc16768fe66b11c07282c6d5d543701b85b283a44de51fdd4a9bd2a014f37b68" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_NA_unknown
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_NA_LAB"
-date_IOC = "2023-09-23 05:59:19"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "NA"
-file_type = "unknown"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "3c4c2ade1d7a2c55d3df4c19de72a9a6f68d7a281f44a0336e55b6d0f54ec36a" or
-hash.sha256(0, filesize) == "0296a1b2cb88ab2858ad518656606a5ece65a869c3a33f4d0e40d1757fcbbe4e" or
-hash.sha256(0, filesize) == "0fabab59a233d663ad27cda37133a3d606082738a376ab17d7b0199183805426" or
-hash.sha256(0, filesize) == "b8c8e95c69effbb6a75b10c094db3947ffb9d20695f77ed5c117cd3021b06925" or
-hash.sha256(0, filesize) == "45189573501c838f295b7ab1a09dbcb1d314ba6c8f23143c3de9f9a7b2480361" or
-hash.sha256(0, filesize) == "6ed85f993af39d424f80b74167474723b8ba91a0411dd251e62c7082f39b77e8" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_AGENTTESLA_exe
+rule IOC_AGENTTESLA_zip
 {
 meta:
 author = "Laboratoire Epidemiology & Signal Intelligence"
 ref_IOC = "IOC_AGENTTESLA_LAB"
-date_IOC = "2023-09-23 08:04:41"
+date_IOC = "2023-09-25 05:48:25"
 info = "Version 1.0 b"
 internal = false
 score = 99
 risk_score = 10
 threat = "AGENTTESLA"
+file_type = "zip"
+comment = "Source : abuse.ch"
+
+
+condition:
+hash.sha256(0, filesize) == "3e92abb85fe234dd55668fc71346164ef3a65051ddeff8b4d871837300b03878" or
+hash.sha256(0, filesize) == "d0e87e3e00fcccf1709ca7ec50c8ff2521cfbbfcef0eee9559043748ed46a95f" or
+hash.sha256(0, filesize) == "559923ebc649d70c7342c93287c13fa33c0da6b8cde4281c547cbe2cc3a584b2" or
+hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
+}
+
+
+rule IOC_ONLYLOGGER_exe
+{
+meta:
+author = "Laboratoire Epidemiology & Signal Intelligence"
+ref_IOC = "IOC_ONLYLOGGER_LAB"
+date_IOC = "2023-09-24 04:54:41"
+info = "Version 1.0 b"
+internal = false
+score = 99
+risk_score = 10
+threat = "ONLYLOGGER"
 file_type = "exe"
 comment = "Source : abuse.ch"
 
 
 condition:
-hash.sha256(0, filesize) == "b9e65c1c3afc2091cf7321a438aece41d16739d9ccec4d9cf4f9f2e3bb81d333" or
-hash.sha256(0, filesize) == "5d6130b2af89e845a995a78cf9514be28d29c63ce9e493f08c73500cfe5cf73e" or
-hash.sha256(0, filesize) == "ac4ba0aff57a411df5eabcec6b1ab5cff2ff47dcf578fdce74be6cd3405b626c" or
-hash.sha256(0, filesize) == "bbde0779d21bcd7914988ef4c6c683aa636f5e96786fb64c14e9383a0a772ca3" or
-hash.sha256(0, filesize) == "768ad01a4a10350c639160a41fcb2e08e108cfeddb993cb2535bc1804fdd1a3c" or
-hash.sha256(0, filesize) == "b2e927c33beb8e5f1b48f7f2accc05ab7d96baf812a53299e950aa96e98cd109" or
-hash.sha256(0, filesize) == "023d7cd36f27378bbeb7e7eed586e95a66fbbb6f06ccc84232f1d2216705f371" or
-hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
-}
-
-
-rule IOC_AGENTTESLA_rar
-{
-meta:
-author = "Laboratoire Epidemiology & Signal Intelligence"
-ref_IOC = "IOC_AGENTTESLA_LAB"
-date_IOC = "2023-09-23 08:15:17"
-info = "Version 1.0 b"
-internal = false
-score = 99
-risk_score = 10
-threat = "AGENTTESLA"
-file_type = "rar"
-comment = "Source : abuse.ch"
-
-
-condition:
-hash.sha256(0, filesize) == "e57c9c9e8be4e62ccaccc63cebdff94cb03faee3cd9a50fab8e35c6390a8bb30" or
-hash.sha256(0, filesize) == "8923fb83d1d0e6ca798d80ecf80e9b300538430388b767dfdc597c47a53e70e4" or
-hash.sha256(0, filesize) == "b82c1159670defc81febee26f79728a45f93fe0d27697e987277ec567b2fd74c" or
+hash.sha256(0, filesize) == "bf8ccdff1770b99af8f1ece555f0fe70b28bed5cb4d84ba39ad09eb3f54b16d4" or
+hash.sha256(0, filesize) == "1fe1a5626aa4064b521aa8b2e9830b6b325d21ec6405b4e294a1a943cba15947" or
+hash.sha256(0, filesize) == "2c16200c3d0555be6c757bbebcf4c4015ec93df5f77dbfa71201130237463e8e" or
+hash.sha256(0, filesize) == "93fd64f45f9e672c1cf11d5ea78356e8fb5862ffddeb9819d8886137c87ed3c7" or
+hash.sha256(0, filesize) == "b4c2c0bc21a4740b9b4949688c618a22008e630879faa8e87c488f44bfc1ad3a" or
+hash.sha256(0, filesize) == "5e32d15eca9aa02ea00b0fab9db99e52fc0c90332cd653369d12d0a3b0152427" or
+hash.sha256(0, filesize) == "55beaf1f66b9a21eb32a5820d7b63911974c057c2fc46af82455b7ffbaa0bda1" or
 hash.sha256(0, filesize) == "831abc8d1a70104ae46b5c2c1ce6fce24ef449a03bde0d770a5a67f96ab22e7c"
 }
 
